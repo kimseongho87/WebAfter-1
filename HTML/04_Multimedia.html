@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>이미지 및 영상, 사운드 불러오기</title>
+</head>
+<body>
+   <!--
+         절대 경로 : C:\Users\JMH\Desktop\teacher\workspace\Images\ :  펭수이미지
+         상대 경로 : 웹은 상대 경로~~ 
+                           나를 중심으로 펭수이미지       
+   -->
+   <h3>이미지 삽입</h3>
+   <img src="./pengsoo.png" /><br>
+   <img src="./../Images/001.jpg" alt="이미지 가져오는 중입니다"><br>
+   <img src="./../Images/003.jpg" width="50" height="50"><br>
+
+   <h3>원하는 웹 사이트 이미지 가져오기</h3>
+   <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"><br>
+   <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"><br>
+
+   <h3>파일 삽입</h3>
+   <!-- <object data="./../Images/product.pdf" width="800" height="700"></object>   -->
+    
+   <h3>오디오 삽입</h3>
+   <audio src="./../Meadis/Sleep Away.mp3" controls></audio>
+   <!-- <audio src="./../Meadis/Sleep Away.mp3" autoplay loop="2"></audio> -->
+
+   <h3>비디오 삽입</h3>
+   <video src="./../Meadis/penguins.mp4" controls width="300"></video>
+</body>
+</html>
