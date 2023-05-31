@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>입력 태그</title>
+   <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse : collapse;
+      }
+
+     th, td { padding:10px 20px; }
+  </style>
+</head>
+<body>
+   <table>
+         <caption>입력 태그</caption>
+
+         <tr>
+            <td>TEXT TYPE</td>
+            <td>
+               <input type="text" name="uid"/>
+               <!-- <input type="text" name="uid" value="이름을입력하세요"/> -->
+            </td>
+         </tr>
+
+         <tr>
+            <td>Password TYPE</td>
+            <td>
+               <input type="password" maxlength="3" name="upwd" />
+            </td>
+         </tr>
+
+         <tr>
+            <td>RADO TYPE</td>
+            <td>
+               <input type="radio" value="남자" name="gender" /> 남자
+               <input type="radio" value="여자" name="gender" checked/> 여자
+            </td>
+         </tr>
+
+         <tr>
+            <td>CHECKBOX TYPE</td>
+            <td>  <!-- 서버로 전달될때 배열 -->
+                  <input type="checkbox" value="사과"  name="fruit"> 사과
+                  <input type="checkbox" value="바나나" name="fruit">바나나
+                  <input type="checkbox" value="망고"  name="fruit" checked>망고
+                  <input type="checkbox" value="수박" name="fruit"> 수박
+            </td>
+         </tr>
+
+         <tr>
+            <td>FILE TYPE</td>
+            <td>
+                  <input type="file" name="file">
+            </td>
+         </tr>
+
+         <tr>
+            <td>BUTTON TYPE</td>
+            <td>
+               <!-- JavaScript 이벤트 처리에서 완성된다-->
+               <input type="button" value="BUTTON 임">
+               <input type="submit" value="SUBMIT 임">
+               <input type="reset" value="RESET 임">
+            </td>
+         </tr>
+
+         <tr>
+            <td>COLOR TYPE</td>
+            <td>
+                  <input type="color" name="mycolor">
+            </td>
+         </tr>
+
+         <tr>
+            <td>DATA TYPE</td>
+            <td>
+                  <input type="date" name="mydate">
+            </td>
+         </tr>
+      </table><br>
+
+      <fieldset style="width: 500px;">
+         <legend><strong>과일정보</strong></legend>
+         
+         <div>SELECT</div>
+         <select name="fruit01">
+               <option></option>
+               <option value="사과">사과</option>
+               <option value="바나나">바나나</option>
+               <option value="딸기">딸기</option>
+         </select><br><br>
+
+         <div>SELECT - Multiple</div>
+         <select multiple size="5" name="fruit02">
+               <option value="사과">사과</option>
+               <option value="망고">망고</option>
+               <option value="바나나">바나나</option>
+               <option value="메론">메론</option>
+               <option value="딸기">딸기</option>
+         </select><br><br>
+
+         <div>TEXT AREA</div>
+         <textarea  rows="10"  cols="100"></textarea>
+      </fieldset>
+</body>
+</html>
