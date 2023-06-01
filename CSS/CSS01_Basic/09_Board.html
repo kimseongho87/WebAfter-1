@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>선긋기</title>
+	<style>
+			div{
+				font-size: 14px;
+				font-family: 맑은 고딕;
+			}
+
+			.myBorder{
+				border-style: solid;
+				border-width:5px;
+				border-color: red;
+				background-color: yellow;
+			}
+
+			.myBorderStyle{
+				/* 위쪽*/
+				border-top-style: dotted;
+				border-top-color: pink;
+				border-top-width: 5px;
+
+				/*오른쪽*/
+				border-right-style: solid;
+				border-right-color: blue;
+				border-right-width: 10px;
+
+				/*아래쪽*/
+				border-bottom-style: double;
+				border-bottom-color: green;
+				border-bottom-width: 5px;
+
+
+				/*왼쪽*/
+				border-left-style: dashed;
+				border-left-color: brown;
+				border-left-width: 5px;
+			}
+
+			p{
+				border-style: solid;
+				border-color: gray;
+				border-width: 2px ;
+
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				float: left;
+			}
+
+			span{
+				border-style: solid;
+				border-width: 1px;
+				width: 100px;
+				height: 100px; 
+
+				display: block;
+				text-align: center;
+				line-height: 100px;
+				float:left;
+
+				border-right-width: 0px;
+			}
+	</style>
+</head>
+<body>
+	<div>연습입니다.</div>
+	<br/><br/>
+	
+	<div class="myBorder">연습입니다.</div>
+	<br/><br/>
+	
+	<div class="myBorderStyle">연습입니다.</div>
+	<br/><br/>
+
+	<p>연습1</p>
+	<p>연습2</p>
+	<p>연습3</p>
+	<br><br><br><br><br><br><br>
+
+	<span>연습5</span>
+	<span>연습6</span>
+	<span style="border-right-width: 1px;">연습7</span>
+</body>
+</html>
