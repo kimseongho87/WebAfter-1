@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>가상클래스선택자 - 마우스 </title>
+	<style>
+		#sub{
+			border: 0px solid red;
+			width: 700px;
+			height: 100px;
+		}
+
+		#sub li{
+			list-style-type: none;
+			font-size: 32px;
+			color: orange;
+			font-weight: bold;
+			margin: 10px;
+			float:left;
+		}
+
+		#sub li:hover{
+			color: blue;
+			font-size: 64px;
+			cursor: pointer;
+		}
+
+		#form_style{
+			/* clear: both;   부모 박스모델이 없는 경우 , 그 전 스타일 지움 */       
+			border: 0px solid blue;
+			width: 700px;
+			height: 100px;
+			margin-top: 5px;
+		}
+
+		#form_style label{
+			margin-right: 30px;
+		}
+
+		#form_style input{
+			margin-bottom: 10px;
+		}
+
+		#form_style input:focus{
+			background-color: yellow;
+		}
+
+		#form_style input:disabled{
+			background-color:  rgb(20, 19, 19);
+			color:white;
+		}
+
+		#form_style input:enabled{
+			color: blue;
+		}
+
+	</style>
 </head>
 <body>
-	<div>
+	<div id="sub">
 		<ul>
 			<li>사과</li>
 			<li>바나나</li>
@@ -16,19 +68,20 @@
 			<li>오렌지</li>
 		</ul>
 	</div>
-	<br/><br/><br>
 	
-	<div>
-		<form>
+	<div id="form_style">
+		<form action="#" method="get">
 			<label>이름</label>
 			<input type="text" name="name"/><br/>
 			
 			<label>아이디</label>
-			<input type="text" name="id"/><br/>
+			<input type="text" name="id" value="abc123" disabled="disabled"/><br/>
 			
 			<label>비밀번호</label>
-			<input type="password" name="pwd"  value="123" disabled="disabled"/><br/>
+			<input type="password" name="pwd"  value="123" /><br/>
 		</form>
 	</div>
+
+	4시 50분에 시작합니다.
 </body>
 </html>

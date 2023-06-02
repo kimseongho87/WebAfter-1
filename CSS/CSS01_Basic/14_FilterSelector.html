@@ -5,14 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>가상클래스선택자 - 문자 블록 </title>
+	<style>
+			#wrap{
+				border: solid 0px red;
+				width: 800px;
+				margin: 0px auto;
+			}
+
+			#header{
+				border: solid 0px blue;
+				border-bottom:solid 2px #CCC;
+				width: 800px;
+			}
+
+			#content{
+				border: solid 0px blue;
+				width: 800px;
+			}
+
+			#content > p:nth-child(2)::first-letter,
+			#content > p:nth-child(3)::first-letter{
+				font-size: 32px;
+			}
+
+			#content > p:nth-child(2)::first-line,
+			#content > p:nth-child(3)::first-line{
+				color: blue;
+				font-weight: bold;
+			}
+
+			#content > p:nth-child(1)::selection{
+				background-color: olive;
+				color: red;
+			}
+
+			#footer{
+				border: solid 0px blue;
+			}
+
+			#footer > ul{
+				border: solid 1px #CCC;
+				height: 100px;
+			}
+
+			#footer  li{
+				list-style-type: none;
+				float:left;
+				margin: 3px;
+			}
+
+			#footer  img{
+					width: 200px;
+					height: 90px;
+			}
+	</style>
 	</head>
 <body>
-	<div>
-		<div>
+	<div id="wrap">
+		<div id="header">
 			<h1>설립개요</h1>
 		</div>
 		
-		<div>
+		<div id="content">
 			<p>
 				중소기업 지원업무의 전문성과 효율성을 확보하고 중소기업에 대한 기술,
 				경영, 인력등의 종합지원체계를 구축함으로써 중소기업의 경쟁력 제고를 위해 설립된
@@ -27,10 +81,10 @@
 			</p>
 		</div>
 		
-		<div>
+		<div id="footer">
 			<ul>
-				<li><img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif"></li>
-				<li><img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" ></li>
+				<li><img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"></li>
+				<li><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" ></li>
 			</ul>
 		</div>
 	</div>
