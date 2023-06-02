@@ -5,27 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>방명록</title>
+	<style>
+			h2{
+				border: solid 0px red;
+				width: 410px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+
+				margin:50px auto;
+				letter-spacing: 5px;
+				text-shadow: 5px -5px 3px rgb(0, 204, 255) ;
+			}
+
+			#form_style{
+				border: solid 0px blue;
+				width: 410px;
+				height: 155px;
+
+				margin: 0px auto;
+			}
+
+			#form_style > .title{
+				border: solid 0px green;
+				width: 410px;
+				height: 30px;
+				margin: 2px 0px;
+				text-align: center;
+			}
+
+			#form_style > .content{
+				border: solid 0px pink;
+				width: 400px;
+				height: 86px;
+				margin: 2px 0px;
+			}
+	</style>
 </head>
 <body>
 	<h2>방명록</h2>
-	
-	<form>
-		<div>
-			<label>이름</label>
-			<input type="text" name="name" size="12"/>
-			
-			<label>비밀번호</label>
-			<input type="password" name="password" size="12"/>
-		</div>
-		
-		<div>
-			<textarea  rows="5" cols="53" name="message"></textarea>
-		</div>
-		
-		<div>
-			<input type="submit" value="확인"/>
-			<input type="reset" value="취소"/>
-		</div>
+	<form action="#" method="get" id="form_style">
+			<div class="title">
+				<label for="irum">이름</label>
+				<input id="irum" type="text" name="irum" size="12">
+				
+				<label for="pwd">비밀번호</label>
+				<input  id="pwd" type="password" name="pwd" size="12">
+			</div>
+
+			<div class="content">
+					<textarea rows="5" cols="53" name="message"></textarea>
+			</div>
+
+			<div class="title" style="text-align: right;">
+				<input type="submit" value="확인">
+				<input type="reset" value="취소">
+			</div>
 	</form>
 </body>
 </html>

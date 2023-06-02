@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>선긋기</title>
-</head>
-<body>
-	<div>	
-		<label>가</label>
-		<label>나</label>
-		<label>다</label>
-	</div>
-	<br/><br/>
-	
-	<div>
-		<span>AA</span>
-		<span>BB</span>
-		<span>CC</span>
-	</div>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>선긋기</title>
+		<style>
+				body{
+					margin-top:0px;
+					margin-left: 0px;
+				}
+
+				#hangul{
+					border: solid 1px red;
+					width: 500px;
+					height: 60px;
+					margin-top: 10px;
+					margin-left: 50px;
+				}
+
+				#hangul > label{
+					border: solid 2px blue;
+					width: 300px;
+					height: 30px;
+					display: block;
+					margin-top: 20px;
+					margin-left: 25px;
+
+					text-align: center;
+					line-height:30px;
+				}
+		</style>
+	</head>
+
+	<!-- 1시에 시작합니다 -->
+
+	<body>
+		<div id="hangul">	
+			<label>가</label>
+		</div>
+	</body>
 </html>
