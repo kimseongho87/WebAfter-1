@@ -63,4 +63,48 @@ header > #hit_menu li:nth-child(4){
    border-radius: 10px 0px 0px 10px;
 }
 
-/* 20분 시작합니다.*/
+header > #hit_menu a{
+   color: #282828;
+   font-size: 1.1em;
+}
+
+header > #lnb{
+   width: 100%;
+   border: 1px solid #CCC;
+   margin-top: 5px;
+   border-top-style: dashed;
+}
+
+header > #lnb >ul{
+   border: 0px solid blue;
+   width: 1000px;
+   height: 50px;
+   margin: 0px auto;
+}
+
+header > #lnb  li{
+   float: left;
+   width: 100px;
+   margin: 5px;
+   text-align: center;
+   line-height: 47px;
+}
+
+header > #lnb a{
+   color: #282828;
+   font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
