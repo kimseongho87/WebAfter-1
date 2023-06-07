@@ -1,0 +1,73 @@
+body{ margin: 0px;}
+li{list-style-type: none;}
+
+header{
+   width: 100%;
+   border: 1px solid #ccc;
+}
+
+header > #header_nav{
+   width: 100%;
+   background-color: #2d1152;
+   overflow: hidden;
+}
+
+header > #header_nav > .list{
+   height: 50px;
+   float:left;
+   border: 0px solid red;
+}
+
+header > #header_nav > .list li{
+   float: left;
+   color: #fff;
+   font-size: 0.9em;
+   margin-right: 20px;
+   line-height: 30px;
+}
+
+header > #header_nav > .firefox{
+   height: 50px;
+   float:right;
+   border: 0px solid red;
+   color: #fff;
+   line-height: 50px;
+}
+
+header > #header_info{
+   border: 0px solid red;
+   width: 1000px;
+   margin: 0px auto;
+   overflow: hidden;
+}
+
+header > #header_info div{
+   margin-top: 10px;
+   float:left;
+   border: 0px solid green;
+}
+
+header > #header_info > .search > input[type='text']{
+   width: 400px; 
+   font-size: 20px; 
+   margin-left: 20px;
+   padding: 5px; 
+   border: 1px solid #3488d9;
+}
+
+header > #header_info > .search > input[type='button']{
+   width: 124px;
+   height: 38px;
+   background-image: url(./../../Images/yahoo_search_btn.png);
+   font-size: 1.2em;
+   color: #fff;
+}
+
+header > #header_info  > .service{
+   height: 35px;
+}
+
+header > #header_info  > .service li{
+   float: left;
+   margin-right: 15px;
+}
