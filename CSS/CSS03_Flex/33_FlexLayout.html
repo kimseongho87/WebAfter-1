@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+         .contatiner{
+            width: 100%;
+            border: 1px solid #222;
+            background-color: #eee;
+
+            display: flex;
+
+            /*주축 기준 정렬 */
+            /*주축 시작점 기준으로 배치*/
+            justify-content: flex-start;
+
+            /*주축 끝 기준으로 배치*/
+            justify-content: flex-end;
+
+             /*주축 중앙 기준으로 배치*/
+             justify-content: center;
+
+            /*시작점과 끝점 배치 후 중간항목을  같은 간격으로 배치*/
+            justify-content: space-between;
+
+             /*전체 항목을 같은 간격으로 배치*/
+             justify-content: space-around;
+         }
+
+         .box{
+            background-color: #222;
+            width: 80px;
+            margin: 5px;
+            padding: 5px 45px;
+         }
+
+         p{
+            color: #fff;
+            text-align: center;
+         }
+   </style>
+</head>
+<body>
+   <div class="contatiner">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+      <div class="box"><p>4</p></div>
+   </div>
+</body>
+</html>

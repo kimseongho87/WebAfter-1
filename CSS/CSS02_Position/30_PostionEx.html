@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #wrapper{
+         border: 0px solid red;
+         width: 600px;
+         height: 250px;
+         margin: 100px auto;
+
+         position: relative;
+      }
+      .circle{
+         width: 245px;
+         height: 246px;
+
+         border-radius: 50%;
+         position: absolute;
+      }
+
+      .circle:nth-child(1){
+         background-color: #F60;
+         left: 100px;
+      }
+
+      .circle:nth-child(2){
+         background-color: #00FF04;
+         left:200px;
+      }
+
+      .circle:nth-child(3){
+         background-color: #FEDD15;
+         left:300px;
+      }
+
+      #badge{
+         background-color: blue;
+         width:100px;
+         height: 50px;
+         color: white;
+
+         padding-top: 10px;
+         padding-left: 10px;
+
+         position: fixed;
+         top:0px;
+         right: 24px;
+      }
+   </style>
+</head>
+<body>
+      <div id="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+
+            <div id="badge">
+               Ex - <br>
+               Multicampus
+            </div>
+
+            12분에 시작합니다.
+      </div>
+</body>
+</html>

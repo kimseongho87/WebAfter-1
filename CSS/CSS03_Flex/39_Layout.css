@@ -1,0 +1,101 @@
+#con{
+   width: 90%;
+   border: 0px solid red;
+   margin: 0px auto;
+}
+
+header{
+   width: 95%;
+   border: 1px solid gray;
+   margin: 5px auto;
+}
+
+header  > #gnb > ul,
+header  > #lnb > ul{
+   border: 0px solid blue;
+   /* overflow: hidden;  */
+   display: flex;
+}
+
+header  > #lnb > ul{
+   flex-direction: row-reverse;
+}
+
+header li{
+   list-style-type: none;
+   border: 2px dotted black;
+   width: 70px;
+   height: 50px;
+   text-align: center;
+   line-height: 50px;
+   font-family: 'Caveat', cursive;
+}
+
+header a{
+   text-decoration: none;
+}
+
+header  > #gnb  li{
+   /* float:left; */
+   border-right-width: 0px;
+} 
+
+header  > #gnb  li:nth-child(5){
+   border-right-width: 2px;
+}
+
+header  > #lnb  li{
+   /* float:right; */
+   border-right-width: 0px;
+} 
+
+header  > #lnb  li:nth-child(1){
+   border-right-width: 2px;
+   margin-right: 28px;
+}
+
+#content{
+   width: 95%;
+   margin: 5px auto;
+   border: 1px solid black;
+
+   /* overflow: hidden; */
+   /*내자신의 height가 없으면 자식 높이로 자동 맞춰진다.
+      단, 자식이 행에서 열(float:left)로 바뀌면 선이 깬다.   */
+   display: flex;
+}
+
+#content > #section,
+#content > #aside{
+   height: 1000px;
+   border: 1px solid black;
+   /* float:left; */
+   margin:5px auto;
+   font-weight: bold;
+   font-size: 1.2em;
+   font-family: 'Righteous', cursive;
+}
+
+#content > #section{
+   /* width: 70%; */
+   flex: 2;
+   margin-right: 2px;
+   margin-left: 2px;
+}
+
+#content > #aside{
+   /* width: 28%; */
+   flex: 1;
+}
+
+footer{
+   width: 95%;
+   height: 100px;
+   border: 1px solid black;
+   margin: 5px auto;
+   text-align: center;
+   line-height: 100px;
+   font-family: 'Caveat', cursive;
+}
+
+

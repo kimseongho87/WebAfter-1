@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+        #wrapper{
+            border: 3px solid black;
+            width: 150px;
+            height: 300px;
+            margin-left: 100px;
+        }
+
+        div{
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          line-height: 100px;
+          color: white;
+        }
+
+        #one{
+          background-color: red;
+        }
+
+        #two{
+          background-color: blue;
+
+          /*본인의 static 위치에 이동 - 부모 상관이 없다*/
+          /* position: relative;
+          top:40px;
+          left:40px; */
+
+          /*부모와 상관없이 body 절대 위치*/
+           position: fixed;
+           left: 40px;
+           top:100px;
+        }
+
+        #three{
+          background-color: green;
+        }
+   </style>
+</head>
+<body>
+    <div id="wrapper">
+          <div id="one">1</div>
+          <div id="two">2</div>
+          <div id="three">3</div>
+    </div>
+</body>
+</html>

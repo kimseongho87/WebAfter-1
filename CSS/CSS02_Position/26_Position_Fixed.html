@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      /* Position : HTML 요소의 위치를 결정하는 방식 
+           1) static(정적위치) : 기본값, 웹 페이지 흐름에 따라 차례대로 요소를 위치
+                                           위치이동이 불가함
+           2) relative(상대위치) : 자기 위치에서 이동 left, top, bottom, right
+           3) absolute( 절대 위치)  : 문서위치(body)에 절대 값        
+           4) fixed(고정 위치) : 절대위치랑 거의 비슷, 스크롤해도 유지               
+          */
+
+    div{
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+    }
+
+    #one{
+      background-color: red;
+      position: fixed;
+      top:50px;
+      left:50px;
+    }
+
+    #two{
+      background-color: blue;
+      position: fixed;
+      top:100px;
+      left:100px;
+    }
+
+    #three{
+      background-color: green;
+      position: fixed;
+      top:150px;
+      left:150px;
+    }
+   </style>
+</head>
+<body>
+   <div id="one">1</div>
+   <div id="two">2</div>
+   <div id="three">3</div>
+</body>
+</html>

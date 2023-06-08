@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+         .contatiner{
+            width: 700px;
+            border: 1px solid #222;
+            background-color: #eee;
+
+            display: flex;                        /*== float:left, 기본값:  flex-direction: row */
+
+            /*왼쪽에서 오른쪽 배치*/
+            flex-direction: row;  
+
+             /*오른쪽에서  왼쪽 배치*/
+            flex-direction: row-reverse;
+
+            /*위에서 아래로 배치*/
+            flex-direction: column;
+
+            /*아래에서 위로 배치*/
+            flex-direction: column-reverse;
+         }
+
+         .box{
+            background-color: #222;
+            width: 80px;           /* 대략 W: 170px / H: 30px*/
+            margin: 5px;     
+            padding: 5px 45px;
+         }
+
+         p{
+            color: #fff;
+            text-align: center;
+         }
+   </style>
+</head>
+<body>
+   <div class="contatiner">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+   </div>
+</body>
+</html>
