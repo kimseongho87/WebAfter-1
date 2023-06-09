@@ -1,0 +1,24 @@
+footer{
+   width: 100vw;
+   background-color: black;
+   color: #fff;
+   font-size: 0.9em;
+
+   grid-area: footer;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+footer div:nth-child(1){
+   border: 0px solid red;
+   width: 200px;
+}
+
+footer div:nth-child(2){
+   border: 0px solid red;
+   width: 300px;
+
+   margin-right: 300px;
+}

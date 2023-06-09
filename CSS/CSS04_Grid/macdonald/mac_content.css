@@ -1,0 +1,41 @@
+#content{
+   border: 0px solid blue;
+   width: 62vw;
+   margin: 25px auto;
+
+   grid-area: content;
+}
+
+#content > h2{
+   margin: 0 0 60px;
+   color: #292929;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 1;
+}
+
+#content > #main > .card{
+   border: 0px solid red;
+   width: 365px;
+   height: 430px;
+
+   background-color: #fff;
+   box-shadow: 0px 1px 5px #979797;
+   border-radius: 0px 0px 10px 10px;
+}
+
+#content  img{
+   border-radius: 10px 10px 0px 0px;
+}
+
+#content  p{
+   font-weight: bold;
+   padding-left: 20px;
+   line-height: 1.7;
+}
+
+#content  > #main{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-gap: 3rem;
+}
