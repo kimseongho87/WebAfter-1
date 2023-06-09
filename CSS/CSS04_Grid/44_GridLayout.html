@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+         .items{
+            background-color: #eee;
+            padding: 10px;
+         }
+
+         .items:nth-child(2n-1){
+            background-color: #bbb;
+         }
+
+         #wrapper{
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;    /*repeat(3, 1fr)*/
+            /* grid-template-rows: 2fr 1fr; */
+
+            /*줄 높이 최소값 지정 후  내용이 많아지면 자동으로 맞춴다*/
+            grid-template-rows: minmax(100px, auto);
+           
+            grid-column-gap: 30px;
+            grid-row-gap: 20px;
+         }
+   </style>
+</head>
+<body>
+      <div id="wrapper">
+            <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, ut obcaecati! Corrupti deserunt consequatur placeat pariatur eos in soluta! Nesciunt voluptatibus, quia quas qui odio assumenda nulla optio quod repellendus.</div>
+            <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, ut obcaecati! Corrupti deserunt consequatur placeat pariatur eos in soluta! </div>
+            <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, ut obcaecati!</div>
+            <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+            <div class="items">
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+                  Lorem ipsum dolor sit,
+            </div>
+      </div>
+</body>
+</html>
