@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>연산자</title>
+</head>
+<body>
+      <h3>대입연산자(할당연산자)</h3>
+      <script>
+            let su=10;
+            su +=5;          //  15 su=su+5;
+            su *=10;         //  150
+            su /=2;           //  75
+            document.write(su + "<br/>");
+      </script>
+
+      <h3>비교(관계) 연산자</h3>
+      <script>
+            let num=10;
+            let value=20;
+            let a=num == value;        // 10==20
+            let b=num != value;       // 10 != 20
+            let c=num > value;        //  10 > 20
+            let d=num >= value;      // 10 >= 20
+            let e=num < value;        //  10 < 20
+            let f=num <= value;       //  10 <= 20
+
+            document.write(a + "<br/>");
+            document.write(b + "<br/>");
+            document.write(c + "<br/>");
+            document.write(d + "<br/>");
+            document.write(e + "<br/>");
+            document.write(f + "<br/><br/>");
+      </script>
+
+      <h3>논리연산자</h3>
+      <script>
+            // &&(and) 
+            let nai=27;
+            let result=nai >=20 && nai < 30;    // 27 >=20 &&  27 > 30
+            document.write(result + "<br/>");
+
+            // || (or)
+            let ju=2;
+            let r=ju==2 || ju==4 || ju==6;
+            document.write(r + "<br/>");
+
+            // 여자, 20대
+            let x=r && result;  
+            document.write(x+ "<br/>");
+
+            let y=(nai >=20 && nai < 30) && (ju==2 || ju==4 || ju==6);
+            document.write(y+ "<br/>");
+
+            // ! (not)
+            let z=!r;                  // z=!!!r;
+            document.write(z);
+      </script>
+
+      <h3>삼항연산자</h3>
+      <script>
+            // (조건식) ?  참:거짓
+            let min=-10;
+            let str=min > 0 ? "양수":"음수";
+            document.write(str + "<br/>");
+
+            let max=60;
+            let maxResult=max >= 60 ? "합격":"불합격";
+            document.write(maxResult + "<br/>");
+      </script>
+</body>
+</html>

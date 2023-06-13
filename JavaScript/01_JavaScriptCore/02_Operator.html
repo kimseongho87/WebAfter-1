@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>연산자</title>
+</head>
+<body>
+      <h3>산술 및 증감연산자</h3>
+      <script>
+            let su=10;
+            let value=20;
+
+            let hap=su+value;             // hap 30 =10+20
+            let cha=su-value;
+            let mul=su*value;
+            let div=su/value;
+            let rest=su%value;
+
+            document.write(hap + "\t" + cha + "<br/>");
+            document.write(mul + "\t" + div + "<br/>");
+            document.write(rest + "<br/><br/>");
+
+            document.write(su + "<br/>");
+            ++su;                 // 11
+            su++;                 // 12
+            document.write(su + "<br/>");
+            --su;                   // 11
+            su--;                  //  10
+            --su;                  //  9
+            document.write(su + "<br/>");
+      </script>
+</body>
+</html>

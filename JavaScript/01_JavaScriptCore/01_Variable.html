@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>자료형</title>
+</head>
+<body>
+      <pre>
+            *** 자바스크립 구성 ****
+            1. JavaScriptCore : 기본문법 (변수, 자료형, 조건문, 반복문, 배열)
+            2. JavaScriptDOM
+            3. JavaScriptBOM
+      </pre>
+
+      <script>
+            /* 변수 선언  규칙
+                1. 영문자로 시작한다. / 10su (x) 
+                2. 특수문자, 공백 사용불가 (단, _ 또는 $ 사용가능)  / s u, s%%%u (x)
+                3. 대문자소문자 구별.  su, SU
+
+                4. 개발자 약속
+                    카멜 표기법 : suValue  두개의 단어가 합쳐질때는 첫글자 대문자
+            */
+           /*
+                 문자: 영문자, 한글, 특수문자
+                 숫자: 정수 
+                          실수 
+           */
+
+           let name="홍길동";
+           let age=34;
+           let ki=188.8;
+           name="박길동";
+
+           document.write("안녕하세요 <br><br><br>" );
+           document.write("<h3>안녕하세요</h3>");
+           document.write("<div>" + name + "</div><br>");
+           document.write("<h3>" + age + "</h3>");
+           document.write(ki);
+           document.write("<br><br>");
+
+           let num=true;
+           let value=false;
+
+           let first=null;   // 데이터가 유효하지 않다.
+           // first=10;     first=22.5;   first="apple";
+
+           let scond;        // 아무것도 정의 되지 않은 상태
+           document.write(first + "," + scond + "<br><br>");
+      </script>
+
+      <div>홍길동</div>
+      <div>34</div>
+      <div>188.9</div>
+
+      <DIV>우하하</DIV>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
