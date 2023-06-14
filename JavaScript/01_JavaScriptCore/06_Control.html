@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>제어문 - 조건문</title>
+</head>
+<body>
+      <h3>형식3) if ~ else if</h3>
+      <script>
+            let num=52;
+            let value=24;
+
+            if(num == value){          // 52 == 24
+                  document.write("두수가 같습니다.");
+            }else if(num > value){     // 52 > 24
+                  document.write("num 더 큰수");
+            }else if(num < value){
+                  document.write("num 작고, value 더 크다");
+            }
+      </script>
+      <br><br>
+
+      <script>
+            let name="홍길동";
+            let kor=70;
+            let eng=80;
+            let mat=90;
+
+            let tot=kor+eng+mat;
+            let avg=tot/3;
+
+            let hakjum=null;
+            if(avg >=90){
+               hakjum="수";
+            }else if(avg >=80){
+               hakjum="우";
+            }else if(avg >=70){
+               hakjum="미";
+            }else if(avg >=60){
+               hakjum="양";
+            }else if (avg < 60){
+               hakjum="가";
+            }
+
+            document.write(name + "<br>" + avg + "<br>" +  hakjum);
+      </script>
+</body>
+</html>

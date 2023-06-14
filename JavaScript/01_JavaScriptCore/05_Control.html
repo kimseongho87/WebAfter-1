@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>제어문 - 조건문</title>
+</head>
+<body>
+      <!--
+               형식1) if(조건식) { ...... }
+
+               형식2) if(조건식){
+                                 .....
+                           }else{
+                                 .......
+                           }
+               
+               형식3) if(조건식){
+                                   .....
+                           }else if(조건식){
+                                 ...
+                           }else if() { }    .....                           
+      -->
+
+      <h3>형식2) if ~ else 문</h3>
+      <script>
+            let a=-25;
+            if(a > 0){            //  a -25 > 0  if(false)
+               document.write("양수입니다.");
+            }else{
+               document.write("음수입니다.");
+            }
+            document.write("<br>");
+
+            let b=a > 0 ? "양수입니다":"음수입니다";
+            document.write(b + "<br><br>");
+
+            if(a%2 == 0){       // a -25%2 == 0 if(false)
+               a +=100;
+               document.write("짝수입니다." + a)
+            }else{
+               a *=200;
+               document.write("홀수입니다." + a);
+            }
+            document.write("<br><br>");
+
+            let score=50;
+            if(score >=50){
+               document.write("합격입니다. <br>");
+               document.write("점수는" +  score +  "입니다");
+            }else{
+               document.write("불합격입니다. <br>");
+               document.write("점수는" +  score +  "입니다");
+            }
+      </script>
+</body>
+</html>

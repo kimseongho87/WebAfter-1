@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>제어문 - 조건문</title>
+</head>
+<body>
+      <h3>switch ~ case </h3>
+      <script>
+            let su=2;
+
+            switch(su){    // 4
+                  case 1:
+                        document.write("1번 <br>");
+                        break;
+                  case 2:
+                        document.write("2번 <br>");
+                        break;
+                  case 3:
+                        document.write("3번 <br>");
+                        break;
+                  case 4:
+                        document.write("4번 <br>");
+                        break;
+            }
+
+            if(su==1){
+
+            }else if(su==2){
+
+            }else if(su==3){
+
+            }else if(su==4){
+
+            }
+      </script>
+
+      <script>
+            let session=prompt("관심세션을 선택해주세요 (1. 마케팅 / 2. 개발 / 3. 디자인)");
+           // document.write(session);
+            let sessionNum=parseInt(session);
+
+            switch(sessionNum){              // switch(session) ..... case "1":
+                  case 1:
+                        document.write("<h3>마케팅 세션은 <strong>201호</strong></h3>");
+                        break;
+                  case 2:
+                        document.write("<h3>개발 세션은 <strong>301호</strong></h3>");
+                        break;
+                  case 3:
+                        document.write("<h3>디자인 세션은 <strong>401호</strong></h3>");
+                        break;
+            }
+      </script>
+</body>
+</html>

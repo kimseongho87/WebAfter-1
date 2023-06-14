@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>제어문 - 조건문</title>
+</head>
+<body>
+      <!-- 중첩 if문-->
+      <script>
+           // 양수, 음수 / 200보다 큰수 작은수  ==> 양수이면 200보다 큰수
+
+           let su=150;
+
+           if(su > 0){                   // if(su > 0 && su >200){ }
+               if(su > 200){
+                     document.write("양수이면 200보다 큰수");
+               }else{
+                     document.write("양수이면 200보다 작수"); 
+               }
+           }else{
+               document.write("음수");
+           }
+      </script>
+      <br><br>
+
+      <script>
+            // 성적표 A(A+, A0, A-), B(B+, B0, B-), C(C+, C0, C-)
+
+            let score=84;
+
+            let grade=null;
+            if(score >=90){       // 100~97, 96~94, 93~90
+               if(score >=97){
+                  grade='A+';
+               }else if(score <=96 && score >=94){
+                  grade="A0";
+               }else if(score <=93){
+                  grade="A-";
+               }
+
+            }else if(score >=80){
+               if(score >= 87){
+                  grade="B+";
+               }else if(score <= 86 && score >=84){
+                  grade="B0";
+               }else if(score <=83){
+                  grade="B-";
+               }
+
+            }else if(score >=70){
+               if(score >= 77){
+                  grade="C+";
+               }else if(score <= 76 && score >=74){
+                  grade="C0";
+               }else if(score <=73){
+                  grade="C-";
+               }
+
+            }else if(score < 70){
+               grade="재수강";
+            }
+
+            document.write(score + "<br>" + grade);
+      </script>
+</body>
+</html>
