@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>반복문</title>
+</head>
+<body>
+      <h3>반복문</h3>
+      <script>
+            for(let i=1;i<=10;i++){     // 1) 1 초기값   2) 11 <=10     4) 11
+               document.write("<h2> 안녕하세요 </h2>");    // 3)
+            }
+            
+            for(let i=1;i<=10;i++){
+               document.write("<div>" + i + "</div>");
+            }
+            
+            let sum=0;
+            for(let i=1;i<=100;i++){
+               sum=sum+i;       // sum += i; 
+            }
+            document.write("결과:" + sum + "<br/>");
+      </script>
+      <br><br>
+
+      <script>
+            let hap=0;
+
+            for(let i=1;i<=100;i++){
+               if(i%2==0){
+                  hap += i;                  // hap=hap+i
+               }
+            }
+
+            document.write("<div> hap:" + hap + "</div><br>");
+      </script>
+      <br><br>
+
+      <script>
+            let add=0;
+
+            for(let i=100;i<=200;i++){
+               if(i > 150 && i < 190){
+                  add +=i;
+               }
+            }
+
+            document.write("add:" + add);
+
+            // 16분 시작합니다.
+      </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>제어문 - 반복문</title>
+</head>
+<body>
+      <h3>다중 for</h3>
+      <script>
+         for(let i=1;i<=3;i++){        // i = 1, 2, 3
+            for(let j=1;j<=5;j++){     // j=12345
+               document.write(i + " " + j + "<br>");
+            }
+            document.write("<br>");
+         }
+      </script>
+      <br><br>
+
+      <script>
+            for(let i=1;i<=5;i++){    // 5
+               let stars="";
+               for(let j=1;j<=i;j++){    //     1 < =5
+                  stars +="*";      //  
+               }
+               document.write(stars + "<br>");
+            }
+      </script>
+
+      <script>
+            for(let i=5;i>=1;i--){
+               let stars="";
+               for(let j=1;j<=i;j++){   // 2 <= 5
+                  stars +="*";
+               }
+               document.write(stars + "<br>");
+            }
+
+            // 5시 10분에 시작합니다.
+      </script>
+</body>
+</html>

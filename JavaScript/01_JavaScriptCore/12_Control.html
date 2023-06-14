@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>제어문 - 반복문</title>
+   <style>
+      div{
+         border: 1px solid #ccc;
+         margin: 15px;
+         padding: 0px 20px 30px 20px;
+         display: inline-block;
+      }
+
+      div h3{
+         text-align: center;
+      } 
+   </style>
+</head>
+<body>
+      <h3>구구단</h3>
+      <script>
+         for(let dan=2;dan<=9;dan++){
+            document.write("<div>");
+            document.write("<h3>" + dan + "단</h3>");
+
+            for(let i=1;i<=9;i++){
+               document.write(dan + "x" + i + "=" + (dan*i) + "<br>");
+            }
+            document.write("</div>");
+         }
+      </script>
+</body>
+</html>
