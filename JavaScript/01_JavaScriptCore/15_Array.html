@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>배열</title>
+</head>
+<body>
+      <h3>배열</h3>
+      <script>
+            let a=10;
+            let b=20;
+            let c=30;
+
+            let arr=[10, 20, 30];            // 100개 가정
+            document.write(arr[0] + " ");
+            document.write(arr[1] + " ");
+            document.write(arr[2] + "<br><br>");
+
+            for(let i=0;i<3;i++){   // 0 1 2
+               document.write(arr[i] + " ");      // arr[0] arr[1] arr[2]
+            }
+
+            document.write("<br> 배열길이:" + arr.length + "<br>");
+
+            for(let i=0;i<arr.length;i++){       // i < 3
+               document.write(arr[i] + " ");
+            }
+
+            document.write("<br>");
+
+            let strArr=["apple", "banana", "melon"];
+            for(let i=0;i<strArr.length;i++){
+               document.write(strArr[i] + " ");
+            }
+  
+             // 1시 10분 시작합니다.
+      </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+      <h3>while, do~while 차이</h3>
+      <script>
+         let su=10;
+         while(su > 50){
+            document.write(su + "<br>")
+         }
+
+         do{
+            // 무조건 한번은 실행된다.
+            document.write(su + "<br>");
+         }while(su > 50);
+      </script>
+      <br><br>
+
+      <h3> for - break, continue</h3>
+      <script>
+         for(let i=1;i<=10;i++){
+               if(i==5) {
+                  break;
+               }
+
+               document.write(i + " ");     // 1, 2, 3, 4
+         }
+
+         document.write("<br>")
+
+         for(let i=1;i<=10;i++){
+            if(i==5){
+               continue;
+            }
+
+            document.write(i + " ");   // 1 2 3 4 6 7 8 9 10
+         }
+      </script>
+      <br><br>
+
+      <h3> while / do ~ while - break, continue</h3>
+      <script>
+            let num=49;
+
+            while(num < 60){
+               num++;
+
+               if(num == 55){
+                  // break;
+                  continue;         // 무한루프빠졌다
+               }
+
+               document.write(num + " ");
+            }
+      </script>
+      <br><br>
+
+      <script>
+           let cnt=49;
+           do{
+               cnt++;
+
+               if(cnt ==55){
+                  /// break;
+                  continue;
+               }
+
+               document.write(cnt + " ");
+
+           }while(cnt < 60);
+      </script>
+</body>
+</html>

@@ -9,11 +9,50 @@
       <h3>while</h3>
       <script>
          let x=1;       // 초기값 for(let i=1;......)
-
          while(x <=5){     // 3 <=5
                document.write(x + "<br>");    // 1  2
                x++;    // 2 3
          }
+         document.write("<br>");
+
+         let sum=0;
+         let cnt=1;
+         while(cnt <= 100){
+            sum +=cnt;
+            cnt++;
+         }
+         document.write(sum + "<br><br>");
+
+         let y=100;
+         while(y <=200){
+            if(y > 150 && y <  170){
+                  document.write(y + "<br>");
+            }
+            y+=2;
+         }
+      </script>
+      <h3> do ~ while</h3>
+      <script>
+            let a=1;
+            do{
+                  document.write(a + "<br>");
+                  a++;
+            }while(a <=10);
+
+            document.write("<br>");
+
+            let count=1;
+            let hap=0;
+            do{
+                  hap += count;
+                  count++;
+            }while(count <=100);
+
+            document.write(hap + "<br>");
+      </script>
+      <script>
+            // 1~100 수중에서 짝수 합 : for, while, do~while   
+            // 22분 시작합니다.
       </script>
 </body>
 </html>
