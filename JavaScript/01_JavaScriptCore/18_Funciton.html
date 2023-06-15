@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>함수</title>
+</head>
+<body>
+   <h3>함수 - 매개변수, 인수 </h3>
+   <script>
+         function sub(a, b, c){     // a=22.5, b=apple, c=70
+            document.write(a + " " + b + " " + c);
+            document.write("<br>");
+         }
+
+         sub(10, 20, 30);
+         
+         sub(22.5, "apple", 70);
+   </script>
+   <br><br>
+
+   <h3>사칙연산 함수 만들기</h3>
+   <script>
+         function hap(a, b){
+            document.write(a+b + "<br>");
+         }
+
+         function cha(a, b){
+            document.write(a-b + "<br>");
+         }
+
+         function mul(a, b){
+            document.write(a*b + "<br>");
+         }
+
+         function div(a, b){
+            document.write(a/b + "<br>");
+         }
+
+         
+         let su=10;
+         let value=20;
+
+         hap(su, value);
+         cha(su, value);
+         mul(su, value);
+         div(su, value);
+   </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <script>
+         // 찾는 과정을 이벤트 핸들러
+
+         function apple(){   
+                 // 이벤트 처리
+                 alert("나 찾았니?");
+         }
+
+         function banana(){
+            alert("왜 또????????");
+         }
+
+         function melon(){
+            let check=confirm("정말 삭제하시겠습니까?");
+            
+            // alert(check);
+            if(check==true){
+               // DB 삭제한다.
+            }else{
+               alert("진짜 취소됨");
+            }
+         }
+   </script>
+
+   <!-- onclick : 이벤트 발생(클릭)-->
+   <input type="button" value="또연습" onclick="melon()">
+   <br><br>
+
+   <input type="button" value="JavaScript Ex" onclick="apple()"/>
+   <br><br>
+
+   <input type="button" value="banana" onclick="banana()">
+   <br><br>
+
+   <input type="button" value="melon" onclick="apple()">
+   <br><br>
+
+   <h3 onclick="banana()" style="cursor: pointer;">안녕하세요</h3>
+   <br><br>
+
+   <div style="cursor: pointer;" onclick="apple()">목요일 힘들어요.. 그나마 재남</div>
+</body>
+</html>

@@ -33,8 +33,41 @@
             for(let i=0;i<strArr.length;i++){
                document.write(strArr[i] + " ");
             }
-  
-             // 1시 10분 시작합니다.
+      </script>
+      <br><br>
+
+      <script>
+               let array=[];           // let a=null;   
+               array[0]=10;
+               array[1]=25.5;
+               array[2]="hi";
+               for(let i=0;i<array.length;i++){    // i < 3
+                  document.write(array[i] + " ");
+               }
+               document.write("<br>");
+
+               let color=["빨강", "노랑", "파랑"];
+               color.push("초록");
+               document.write(color);
+      </script>
+      <br><br>
+
+      <script>
+               let suArray=[1, 2, 55, 88, 120, 56];
+
+               for(let i=0;i<suArray.length;i++){
+                  if(suArray[i] > 50){       //  56 > 50
+                     document.write(suArray[i] + " ");
+                  }
+               }
+
+               let sum=0;
+               for(let i=0;i<suArray.length;i++){
+                  sum+=suArray[i];     // 3=3 + 55
+               }
+               document.write("<br>" + sum);
+
+               // 2시 5분에 시작합니다
       </script>
 </body>
 </html>
