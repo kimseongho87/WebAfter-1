@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+         function sungjuk(obj){                // obj=this=form
+            let kor=parseInt(obj.kor.value);
+            let eng=parseInt(obj.eng.value);
+            let mat=parseInt(obj.mat.value);
+            // alert(kor + "," + eng + "," + mat);
+
+            let tot=total(kor, eng, mat);
+            let avg=average(tot);
+            let result=hakjum(avg);
+            alert(tot + "," + avg + "," + result);
+
+            // 10분에 시작합니다.
+         }
+
+         function total(kor, eng, mat){
+            return kor+eng+mat;
+         }
+
+         function average(tot){
+            return tot/3;
+         }
+
+         function hakjum(avg){
+            let result=null;
+            if(avg >=90){
+               result="A";
+            }else if(avg>=80){
+               result="B";
+            }else if(avg >=70){
+               result="C";
+            }else if(avg>=60){
+               result="D";
+            }else if(avg< 60){
+               result="F"
+            }
+            return result;
+         }  
+   </script>
+</head>
+<body>
+   <form action="#" method="get" onsubmit="return sungjuk(this)">
+      <lable>이름:</lable>
+      <input type="text" name="irum">
+      <br><br>
+
+      <label>국어:</label>
+      <input type="text" name="kor">
+      <br><br>
+
+      <label>영어:</label>
+      <input type="text" name="eng">
+      <br><br>
+
+      <label>수학:</label>
+      <input type="text" name="mat">
+      <br><br>
+
+      <input type="submit" value="성적구하기">
+      <input type="reset" value="취소">
+   </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>함수 </title>
+</head>
+<body>
+      <h3>함수 : return</h3>
+      <script>
+         function abc(){ }
+         function xyz(a, b){ }
+
+         function apple(){
+            return "hi";
+         }
+
+         function banana(a, b){
+            let c=a+b;
+            return c;
+         }
+
+
+         abc();
+         xyz(7, 8);
+
+         let a=apple();      // a="hi"
+         document.write(a + "<br>");
+
+         let b=banana(10, 20);
+         document.write(b);
+      </script>
+      <br><br>
+
+      <script>
+            // 성적표 총점함수, 평균함수, 학점함수
+            function total(k, e, m){
+               return k+e+m;
+            }
+
+            function average(t){
+               return t/3;
+            }
+
+            function hakjum(a){
+
+               let result=null;
+               if(a >=90){
+                  result="A";
+               }else if(a>=80){
+                  result="B";
+               }else if(a >=70){
+                  result="C";
+               }else if(a >=60){
+                  result="D";
+               }else if(a < 60){
+                  result="F"
+               }
+
+               return result;
+            }
+
+
+            let kor=90;
+            let eng=80;
+            let mat=70;
+            let tot=total(kor, eng, mat);
+            let avg=average(tot);
+            let hak=hakjum(avg);
+            document.write(tot + "<br>" + avg + "<br>" + hak);
+      </script>
+</body>
+</html>
