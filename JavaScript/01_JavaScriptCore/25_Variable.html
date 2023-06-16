@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>자료형 종류 : var, let, const</title>
+</head>
+<body>
+   <script>
+         // 1. 유효범위 
+         // 1-1) let : 블럭 안에서 사용가능
+         let a=55;
+
+         if(true){
+            let b=66;
+            console.log(a);
+            console.log(b);
+         }
+
+         console.log(a);
+         // console.log(b);   ERROR
+
+         // 1-2) var : 블럭 외부에서 사용가능
+         var x=77;
+
+         if(true){
+            var y=88;
+            console.log(x);
+            console.log(y);
+         }
+
+         console.log(x);
+         console.log(y);
+   </script>
+
+   <script>
+        // 1-3) 재선언 가능/불가
+         let apple=10;
+         apple=20;
+
+        // let apple=50;  ERROR
+
+        var num=100;
+        num=200;
+        console.log(num);
+
+        var num=300;
+        console.log(num);
+   </script>
+
+   <script>
+      // const 상수
+      const PI=3.141592;
+      const JUMIN="123456-11234567";
+
+      // PI=7; ERROR
+      // 2시 6분 시작
+   </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>함수를 이용한 사칙연산</title>
+   <script src="./29_Obj.js"></script>
+   <script>
+         function calc(form){     
+            let su=parseInt(form.su.value);
+            let buho=form.buho.value;
+            let num=parseInt(form.num.value);
+           // alert(su + "," + buho + "," + num);
+
+            let yon=new Yonsan(su, buho, num);
+            yon.calculate();
+            yon.disp();
+         }
+   </script>
+</head>
+<body>
+      <form name="my_form"> 
+      <!-- <form action="https://www.naver.com" method="get" > -->
+            <label>수:</label>
+            <input type="text" name="su">
+            <br><br>
+
+            <label>부호:</label>
+            <input type="text" name="buho">
+            <br><br>
+
+            <label>수 :</label>
+            <input type="text" name="num">
+            <br><br>
+
+            <input type="button" value="계산" onclick="calc(my_form)"> <!-- submit : 이벤트 + 이벤트기 처리 -->
+            <input type="reset" value="취소">    <!-- reset : 이벤트 + 이벤트기 처리 -->
+     </form>
+
+     <h3 id="disp"></h3>
+
+     // 55분 시작합니다.
+</body>
+</html>

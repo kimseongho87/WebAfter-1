@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>객체</title>
+</head>
+<body>
+      <script>
+            let book={
+               title: "자바스크립트",
+               author: "홍길동",
+               pages: 500,
+               price: 15000
+            }
+
+            document.write(book.title + "<br>");
+            document.write(book.author + "<br>");
+            document.write(book.pages + "<br>");
+            document.write(book.price + "<br>");
+      </script>
+      <br><br>
+
+      <script>
+         let yonsan={
+            su:10,                     // 속성이름 : 속성값
+            value:20,
+
+            hap:function(){         // 함수이름: function()
+               return this.su + this.value;
+            },
+
+            cha:function(){
+               return this.su +  this.value;
+            },
+
+            mul:function(){
+               return this.su * this.value;
+            }
+         }
+
+         document.write(yonsan.hap() + "<br>");
+         document.write(yonsan.cha() + "<br>");
+         document.write(yonsan.mul() + "<br>");
+      </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>생성자함수</title>
+</head>
+<body>
+      <script>
+            // 생성자함수 통해서 객체 만들기
+            function Yonsan(su, value){
+               this.su=su;
+               this.value=value;
+
+               this.hap=function(){
+                  document.write(this.su+this.value + "<br><br>");
+               }
+            }
+
+            let a=new Yonsan(1, 2);
+            a.hap();
+
+            let b=new Yonsan(3, 4);
+            b.hap();
+      </script>
+      <br><br>
+
+      <script>
+            // 클래스를 사용해 객체 생성  : ES6
+
+            class Person{    // 클래스
+               // this : Person 클래스 안에서 다 사용가능
+
+               constructor(name, age, addr){    //  name="홍길동" age=24 addr="서울시 강남구"
+                  this.name=name;
+                  this.age=age;
+                  this.addr=addr;
+               }
+
+               disp(){
+                  document.write(this.name + "<br>" + this.age + "<br>" + this.addr + "<br>") ;
+               }
+            }
+
+            // 객체 생성
+            let hong=new Person("홍길동", 24, "서울시 강남구");
+            hong.disp();
+
+            let park=new Person("박길동", 26, "서울시 영등포구");
+            park.disp();
+
+            // 4시 2분 시작합니다.
+      </script>
+</body>
+</html>
+
+
+
+
+
+

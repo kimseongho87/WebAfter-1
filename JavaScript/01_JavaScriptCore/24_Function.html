@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>함수 표현식</title>
+</head>
+<body>
+   <h3>익명함수</h3>
+   <script>
+         // function 함수명() { ~~~~~ }
+
+         let hi=function(){
+            return "안녕하세요";
+         }
+
+        let add=function(a, b){
+            return a+b;
+         }
+
+         document.write(hi() + "<br>");
+         document.write(add(10, 20) );
+   </script>
+   <br><br>
+
+   <h3>화살표 함수</h3>
+   <script>
+         // 형식3) 
+         function apple(){  
+            return "안녕하세요";
+         }
+
+         //  익명함수
+         let a=function(){
+            return "안녕하세요";
+         }
+
+         // 화살표함수
+         let b=()=>{
+            return "안녕하세요";
+         }
+
+         let c=()=>"안녕하세요";
+
+         document.write(b() + "<br>");
+         document.write(c() + "<br>");
+   </script>
+   <br><br>
+
+   <script>
+         // 형식 3) 
+         function banana(a, b){
+            return a+b;
+         }
+
+         // 익명함수
+         let x=function(a, b){
+            return a+b;
+         }
+
+         // 화살표 함수
+         let y=(a, b)=>{
+            return a+b;
+         }
+
+         let z=(a, b)=>a+b;
+
+         document.write(y(10, 20) + "<br>");
+         document.write(z(100, 200) + "<br>");
+   </script>
+</body>
+</html>

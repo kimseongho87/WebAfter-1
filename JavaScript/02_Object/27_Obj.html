@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>생성자함수</title>
+</head>
+<body>
+      <script>
+            function Book(title, author, page, price){     // title=파이썬 author=조인성, page=600, price=6000
+               this.title=title;
+               this.author=author;
+               this.pages=page;
+               this.price=price;
+
+               this.disp=function(){
+                  document.write(this.title + "<br>");
+                  document.write(this.author + "<br>");
+                  document.write(this.pages + "<br>");
+                  document.write(this.price + "<br>");
+               }
+            }
+
+            let hong=new Book("웹표준", "홍길동", 500, 15000);
+            hong.disp();
+
+            let cho=new Book("파이썬", "조인성", 600, 6000);
+            cho.disp();
+      </script>
+      <br><br>
+
+       <script>
+            function Su(a, b){    // a=15, b=30
+               this.a=a;
+               this.b=b;
+
+               this.disp=function(){
+                  document.write(this.a + "<br>");             // 10 15 
+                  document.write(this.b + "<br><br>");    // 20 30
+               }
+            }
+
+            let x=new Su(10, 20);
+            x.disp();
+
+            let y=new Su(15, 30);
+            y.disp();
+            
+            let z=new Su(35, 40);
+            z.disp()
+       </script>
+</body>
+</html>
