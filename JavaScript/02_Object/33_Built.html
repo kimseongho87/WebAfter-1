@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>내장객체</title>
+</head>
+<body>
+      <h3>Date 객체</h3>
+      <script>
+            // 숫자, 문자, 배열 
+            let today=new Date();
+            document.write("<h4> 오늘의 날짜" + today + "</h4>");
+            document.write("<h4> 년도:" +  today.getFullYear()+ "</h4>");
+            document.write("<h4> 월:" +  (today.getMonth() + 1)+ "</h4>");
+            document.write("<h4> 일:" + today.getDate() + "</h4>");
+            document.write("<h4> 시 :" + today.getHours()  + "</h4>");
+            document.write("<h4> 분:" + today.getMinutes()  + "</h4>");
+            document.write("<h4> 초:" +  today.getSeconds() + "</h4>");
+
+            // YYYY-MM-dd HH:mm:ss   2023-06-19 13:27:01
+            let strToday=today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+            document.write(strToday+ "<br>");
+
+            // 문자열 날짜 - 날짜
+            let strBirthday="2022-12-25";      // 입력 문자열 --> js : 날짜   --> db: 날짜
+            document.write(strBirthday + "<br>");
+
+            let birthday=new Date(strBirthday);
+            document.write(birthday + "<br>");
+      </script>
+</body>
+</html>

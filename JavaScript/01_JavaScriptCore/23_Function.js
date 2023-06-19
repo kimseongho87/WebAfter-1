@@ -2,13 +2,13 @@ function checkForm(obj){    // obj=this=form
    // alert("OK");
    // https://www.youtube.com/channel/UC-622LO2UxQR0OEZA9F90kQ
 
-   if(obj.irum.value==""){
+   if(obj.irum.value==""){       // abc길동
       alert("이름을 입력하세요");
       obj.irum.focus();
       return false;
    }
 
-   if(obj.pwd.value.length < 3){
+   if(obj.pwd.value.length < 3){      // 툭수문자대문소문
       alert("비밀번호 3자리 이상입니다");
       obj.pwd.focus();
       return false;

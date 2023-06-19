@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+      <h3>자바스크립에서 사용되는 정규화 옵션</h3>
+      <script>
+            // Flags 또는 Option
+            // 대소문 구분 안함 i
+            var source="apple";
+            var pattern=/A/i;
+            document.write(pattern.test(source) + "<br>");
+
+            var source="abcdefgabcdefgabcde";
+            var pattern=/a/;
+            document.write(source.match(pattern) + "<br>");
+
+            // g : 문자열 내외 모든 패턴
+            var pattern=/a/g;
+            document.write(source.match(pattern) + "<br>");
+
+            //ig :대소문구분 안함, 모든 패턴
+            var pattern=/a/ig;
+            var source="AbcdefgabcdefgAbcdefg";
+            document.write(source.match(pattern) + "<br>");
+      </script>
+</body>
+</html>

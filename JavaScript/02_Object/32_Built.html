@@ -43,10 +43,31 @@
             strArray.pop();
             document.write("<h2>" +  strArray + "</h2>");
 
-            document.write("<h2>" + strArray.sort()  + "</h2>");            // 정렬 : 오름찬순
+            document.write("<h2>" + strArray.sort()  + "</h2>");            // 정렬 : 오름차순
             document.write("<h2>" +  strArray.reverse() + "</h2>");
-
-            // 1시에 시작합니다. 
       </script>
+      <br><br>
+
+      <h2>Global 객체</h2>
+      <!-- let a=new String("apple");      // let a="apple";
+             let b=new Global(); 선언 자체를 안한다. -->
+      <script>
+            let s="77";              // input type="text"
+            let sum=parseInt(s) + 100;
+
+            let v="88.8";
+            let add=parseFloat(v) + 200;
+            document.write(sum + "<br>" + add + "<br>");
+
+            let url="!#$%()+-*/@~_;:";   
+            let a=encodeURIComponent(url);
+            document.write(a + "<br>");
+
+            let b=decodeURIComponent(a);
+            document.write(b);
+
+            let c='alert("안녕하세요")';
+            eval(c);        // 문자열안에 있는 내용을 읽어 명령처리한다.
+          </script>
 </body>
 </html>

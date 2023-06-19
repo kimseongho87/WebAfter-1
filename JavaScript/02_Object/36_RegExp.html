@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>정규표현식</title>
+</head>
+<body>
+      <h3>Boundary-type</h3>
+      <script>
+            var source="Hello, World";
+            var pattern=/^Hello/;
+            document.write("문자열 시작:" + pattern.test(source) + "<br>");
+
+            var pattern=/World$/;
+            document.write("문자열 끝:" + pattern.test(source) + "<br>");
+      </script>
+
+      <h3>Escpae</h3>
+      <script>
+            var source="Hello $$ World";
+            var pattern=/\$/;             // 정규화 역할을 해제하고 문자로 인식
+            document.write("문자로 인식:" + pattern.test(source) + "<br>");
+
+            var source="Hello ^^ 12345";
+            var pattern=/\^/;
+            document.write("문자로 인식:" + pattern.test(source) + "<br>");
+      </script>
+
+      <h3>Character Class</h3>
+      <script>
+            // 숫자 0~9  : \d
+            var source=123456;
+            var pattern=/\d/;
+            document.write("숫자:" + pattern.test(source) + "<br>");
+
+            var pattern=/\D/;
+            document.write("숫자아님:" + pattern.test(source) + "<br>");
+
+            // 문자 영문자, 숫자, 밑줄 : \w
+            var source="apple";
+            var pattern=/\w/;
+            document.write("문자:" + pattern.test(source) + "<br>");
+
+            var source=123456;
+            document.write("문자:" +  pattern.test(source) + "<br>");
+
+            var source="_banana";
+            document.write("문자:" + pattern.test(source) + "<br>");
+
+            var pattern=/\W/;
+            document.write("문자아님(특수문자)" +  pattern.test(source) + "<br><br>");
+
+            // 공백 : /s
+            var source="     ";
+            var pattern=/\s/;
+            document.write("공백:" + pattern.test(source) + "<br>");
+
+            var pattern2
+            document.write("공백아님:" + pattern.test(source) + "<br>");
+      </script>
+</body>
+</html>
