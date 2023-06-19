@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>내장 객체</title>
+</head>
+<body>
+      <h3>Number 객체</h3>
+      <script>
+            let su=new Number(20);
+            let val=20;
+            document.write("<h3>" + su  + "</h3>");
+            document.write("<h3>" + val  + "</h3>");
+
+            let num=123.45678;
+            document.write("<h3>" + num.toFixed(3) + "</h3>");
+            document.write("<h3>" + num.toPrecision(10) + "</h3>");
+            document.write("<h3>" + num.toPrecision(5) + "</h3>");
+            document.write("<h3> Number 최대값:" + Number.MAX_VALUE + "</h3>");
+            document.write("<h3> Number 최소값:" + Number.MIN_VALUE + "</h3>")
+      </script>
+      <br><br>
+
+      <h3>Math 객체</h3>
+      <script>
+            document.write("<h3> 절대값:" + Math.abs(-15) + "</h3>");
+            document.write("<h3> 최대값:" + Math.max(10, 15) + "</h3>");
+            document.write("<h3> 최소값:" + Math.min(10, 15) +  "</h3>");
+            document.write("<h3> 누승:" + Math.pow(2, 3) + "</h3>");
+            document.write("<h3> 랜덤:" + Math.random() + "</h3>");
+
+            // 13분 시작
+      </script>
+</body>
+</html>

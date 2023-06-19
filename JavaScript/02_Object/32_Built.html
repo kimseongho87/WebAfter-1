@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>내장 객체</title>
+</head>
+<body>
+      <h3>Array 객체</h3>
+      <script>
+            let strArray=["사과", "바나나", "딸기"];
+            let str=new Array("사과", "바나나", "딸기");
+
+            document.write("<h2>" + strArray + "</h2>");
+            document.write("<h2>" + str + "</h2>");
+
+            let suArray=[];
+            suArray[0]=10;
+
+            let su=new Array();
+            su[0]=20;
+
+            document.write("<h2>" + suArray + "</h2>");
+            document.write("<h2>" + su + "</h2>");
+
+            document.write("<h2>" + suArray.concat(strArray) + "</h2>");
+            document.write("<h2>" + strArray.concat(suArray) + "</h2>");
+
+            // ["사과", "바나나", "딸기"];
+            document.write("<h2>" + strArray.join("/") + "</h2>");
+            document.write("<h2>" +  strArray.slice(1) + "</h2>");      // 1번지 부터 출력
+            document.write("<h2>" +  strArray.slice(1, 3) + "</h2>");  
+
+            strArray.push("메론");         // 맨마지막 index 삽입
+            document.write("<h2>" +  strArray + "</h2>");
+
+            strArray.push("수박");          // 맨마지막 index 삽입
+            document.write("<h2>" +  strArray + "</h2>");
+
+            strArray.pop();                     // 맨마지막 데이터 삭제
+            document.write("<h2>" +  strArray + "</h2>");
+            
+            strArray.pop();
+            document.write("<h2>" +  strArray + "</h2>");
+
+            document.write("<h2>" + strArray.sort()  + "</h2>");            // 정렬 : 오름찬순
+            document.write("<h2>" +  strArray.reverse() + "</h2>");
+
+            // 1시에 시작합니다. 
+      </script>
+</body>
+</html>
