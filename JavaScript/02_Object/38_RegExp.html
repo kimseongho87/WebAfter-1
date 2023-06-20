@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>정규표현식</title>
+</head>
+<body>
+      <h3>정규화 다양한 예</h3>
+      <script>
+            // 1. 세자리 숫자를 찾는 패턴 
+            let regexp=/\d{3}/;
+            document.write(regexp.test("Hello") + "<br>");
+            document.write(regexp.test("123") + "<br>");
+            document.write(regexp.test("1234") + "<br>");
+            document.write(regexp.test("1") + "<br>");
+            document.write(regexp.test("12") + "<br><br>");
+
+            // 2. 우편번호 (다섯자리 숫자를 찾는 패턴)
+            let zipcode=/\d{5}/;        // {} 반복
+            document.write(zipcode.test("12345") + "<br>");
+            document.write(zipcode.test("123") + "<br>");
+            document.write(zipcode.test("D123") + "<br>");
+            document.write(zipcode.test("D12345") + "<br>");
+            document.write(zipcode.test("123456") + "<br><br>");
+
+           /*  ^는 문자열의 시작을 나타냅니다.
+                \d는 숫자(digit)에 일치합니다.
+               {5}는 앞의 패턴이 정확히 5번 반복되는 것을 나타냅니다.
+                $는 문자열의 끝을 나타냅니다.  */
+
+            let code=/^\d{5}$/;
+            document.write(code.test("12345") + "<br>");
+            document.write(code.test("123") + "<br/>");
+            document.write(code.test("D123") + "<br/>");
+            document.write(code.test("D12345") + "<br/>");
+            document.write(code.test("123456") + "<br/>");
+      </script>
+      <br><br>
+
+      <script>
+            // 전화번호
+            let telPhone=/^(02|064)-(\d{3}|\d{4})-\d{4}$/;
+            document.write(telPhone.test("02-123-1234") + "<br>");
+            document.write(telPhone.test("064-123-1234") + "<br>");
+            document.write(telPhone.test("010-123-1234") + "<br>");
+            document.write(telPhone.test("02-123456-1234") + "<br>");
+            document.write(telPhone.test("064-1234-123456") + "<br><br>");
+
+            // 핸드폰번호
+            let moblie=/^010-\d{4}-\d{4}$/;
+            document.write(moblie.test("010-1234-1234") + "<br>");
+            document.write(moblie.test("011-1234-1234") + "<br>");
+            document.write(moblie.test("010-123-1234") + "<br>");
+            document.write(moblie.test("010-123-12345") + "<br>");
+      </script>
+</body>
+</html>

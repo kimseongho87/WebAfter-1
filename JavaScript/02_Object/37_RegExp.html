@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>정규화</title>
+</head>
+<body>
+      <h3>Groups and Ranges</h3>
+      <script>
+            var source="How do you do";
+            var pattern=/[oyu]/g;
+            document.write(source.match(pattern) + "<br>");
+
+            // ow, o, yo, o
+            var pattern=/[owy][o]/g;
+            document.write(source.match(pattern) + "<br>");
+
+            var source="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var range=/[C-K]/g;
+            document.write(source.match(range) + "<br>");
+
+            var range=/[^CD]/g;
+            document.write(source.match(range) + "<br>");
+
+            // () : 그룹/캡처
+            // |
+            var source="Monday Tuesday Friday";
+            var pattern=/(on|ues|rida)/g;
+            document.write(source.match(pattern) + "<br>");
+      </script>
+      <br><br>
+
+      <h3>수량 Quantifiers</h3>
+      <script>
+            // * : 0~1~여러개
+            // + : 1~여러개
+            // ?  : 0 ~ 1
+
+            var source="aabc abc bc";
+            var pattern=/a*b/g;
+            document.write(source.match(pattern) + "<br>");
+
+            var pattern=/a+b/g;
+            document.write(source.match(pattern) + "<br>");
+
+            var pattern=/a?b/g;
+            document.write(source.match(pattern) + "<br>");
+      </script>
+      <br><br>
+
+      <script>
+             var source="One ring to bring them all and in the darkness bind them";
+             var pattern=/.{5}/;
+             document.write(source.match(pattern) + "<br>");
+
+             var pattern=/.{5}/g;
+             document.write(source.match(pattern) + "<br>");
+
+             var pattern=/[els]{1,3}/g;
+             document.write(source.match(pattern) + "<br>");    // e,e,ll,e,ess,e
+
+             var pattern=/[els]{3,}/g;
+             document.write(source.match(pattern) + "<br>");    // ess
+      </script>
+</body>
+</html>
+
+
+

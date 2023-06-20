@@ -57,7 +57,30 @@
             document.write("공백:" + pattern.test(source) + "<br>");
 
             var pattern2
-            document.write("공백아님:" + pattern.test(source) + "<br>");
+            document.write("공백아님:" + pattern.test(source) + "<br><br>");
+
+            // .(점) : 대상이 명확하지 않을때
+            var pattern=/./;
+            var source="Hello";
+            var str="Hi";
+            document.write(source.match(pattern) + "<br>");
+            document.write(str.match(pattern) + "<br>");
+
+            var pattern=/.../;
+            document.write(source.match(pattern) + "<br>");
+            document.write(str.match(pattern) + "<br>");
       </script>
-</body>
+ </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
