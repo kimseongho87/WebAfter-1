@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DOM</title>
+      <style>
+          li{list-style-type: none;}
+      </style>
+      <script>
+            function test(){
+               let div=document.querySelectorAll('div');
+               div[0].innerHTML="<h3>가</h3>";
+               div[1].innerHTML="<h3>나</h3>";
+               div[2].innerHTML="<h3>다</h3>";
+               div[3].innerHTML="<h3>라</h3>";
+
+               let result=document.querySelector("#result");
+               result.innerHTML='<h3 style="color:red"> Hello </h3>';
+
+               let li=document.querySelectorAll(".friut");
+               li[0].innerText="<h3>사과</h3>";
+               li[1].innerText="<h3>바나나</h3>";
+               li[2].innerText="딸기";
+        }
+      </script>
+   </head>
+   <body>
+         <!-- Tag 선택자-->
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+
+         <!-- id 선택자-->
+         <div id="result"></div>
+
+         <!--  class 선택자-->
+         <ul>
+            <li class="friut"></li>
+            <li class="friut"></li>
+            <li class="friut"></li>
+        </ul>
+
+         <input type="button" value="클릭" onclick="test()">
+   </body>
+</html>

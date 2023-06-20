@@ -19,14 +19,15 @@
 
             // 이메일
             /* hong@naver.com 
-                a~z, A~Z, 0~9, _(밑줄), .(점), %+- 중 하나이상 올수 있다
-                @ : 이메일 주소에서 @ 기호
-                a~z, A~Z, 0~9,  _(밑줄), .(점) 중 하나이상 올수있다.
-                . : 이메일 주소에서 도메인의 점(.)을 이스케이프
-                a~z, A~Z. {2,}
+                1) a~z, A~Z, 0~9, _(밑줄), .(점), %+- 중 하나이상 올수 있다
+                2) @ : 이메일 주소에서 @ 기호
+                3) a~z, A~Z, 0~9,  _(밑줄), .(점) 중 하나이상 올수있다.
+                4) .(점) : 이메일 주소에서 도메인의 점(.)을 이스케이프
+                5) a~z, A~Z. {2,}
 
                 ^, $
             */
+
            var emailCheck=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,}$/;
            document.write(emailCheck.test("example@example.com") + "<br>");
            document.write(emailCheck.test("exA_mple123@example.com") + "<br>");
@@ -34,8 +35,6 @@
            document.write(emailCheck.test("exA_mple123") + "<br>");
            document.write(emailCheck.test("@exA_mple123") + "<br>");
            document.write(emailCheck.test("exA_mple123@example") + "<br>");
-
-             // 25분 시작합니다.
       </script>
       <br><br>
 
