@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+   <script>
+         function test(){
+            let apple=document.querySelector("#apple");
+            apple.innerHTML="사과";
+
+            let span=document.querySelectorAll("#banana > span");
+            span[0].innerHTML="바나나 최고";
+            span[1].innerHTML="바나나 별루"
+         }
+   </script>
+</head>
+<body onload="test()">
+      <h3>자식 선택자</h3>
+
+      <div id="apple"></div>
+
+      <div id="banana">
+            <span></span><br>
+            <span></span><br>
+      </div>
+</body>
+</html>

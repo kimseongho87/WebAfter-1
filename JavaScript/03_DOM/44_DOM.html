@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+</head>
+<body>
+      <script>
+            function sub(){
+               let apple=document.querySelector("#apple");
+               apple.style.color="red";
+               apple.style.fontSize="30px";
+
+               let strawberry=document.querySelector("#strawberry");
+               strawberry.value="딸기는 맛있습니다.";
+               strawberry.type="button";
+            }
+      </script>
+
+      <h3>속성  - CSS</h3>
+
+      <div id="apple">사과</div><br>
+
+      <input id="strawberry" type="text" value="딸기"/><br><br>
+
+      <input type="button" value="클릭" onclick="sub()"/>
+</body>
+</html>
