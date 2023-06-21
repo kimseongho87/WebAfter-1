@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz</title>
+</head>
+<body>
+      <h3>정규화</h3>
+      <script>
+           // Quiz 18
+            var input = "I have 2 apples and 3 oranges.";
+            var regex = /\d/g;
+            var result = input.match(regex);
+            console.log(result);             // 2 3
+
+           // Quiz 19
+           var input = "Please call 555-1234 for assistance.";
+           var regex = /\d{3}-\d{4}/g;
+           var result = input.match(regex);
+           console.log(result);              // 555-1234
+
+            // Quiz 20
+            var input = "Hello    World";
+            var regex = /\s/g;
+            var result = input.replace(regex, "");
+            console.log(result);             // HelloWorld
+
+            // Quiz 21
+            var input = "Hello World";
+            var regex = /[a-z]+/g;
+            var result = input.match(regex).join("");
+            console.log(result);                // elloorld
+      </script>
+</body>
+</html>

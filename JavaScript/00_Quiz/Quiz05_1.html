@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz</title>
+</head>
+<body>
+      <h3>String</h3>
+      <script>
+         // Quiz 28
+         var str = "hello world";
+         let uppercaseStr = str.toUpperCase();
+         console.log(uppercaseStr);
+
+         // Quiz29
+         var str = "hello world";
+         let targetChar = 'o';
+         let count = 0;
+
+         for (let i = 0; i < str.length; i++) {
+            if (str[i] === targetChar) {
+               count++;
+            }
+         }
+         console.log("문자:", targetChar, "개수:", count);
+
+         // Quiz30
+         var str = "hello world";
+         let reversedStr = str.split('').reverse().join('');
+         console.log(reversedStr);
+
+         // Quiz31
+         var str = "The quick brown fox jumps over the lazy dog";
+         let replacedStr = str.replace("fox", "cat");
+         console.log(replacedStr);
+
+         // Quiz32
+         var str = "The quick brown fox jumps over the lazy dog";
+         let words = str.split(' ');
+         let longestWord = '';
+
+         for (let i = 0; i < words.length; i++) {
+            if (words[i].length > longestWord.length) {
+               longestWord = words[i];
+            }
+         }
+         console.log(longestWord);
+      </script>
+
+      <h3>Number, Math</h3>
+      <script>
+         // Quiz 33
+            let number = 3.14159;
+            let roundedNumber = number.toFixed(2);
+            console.log(roundedNumber);
+
+            // Quiz 34
+            let numbers = [5, 8, 2, 10, 3];
+            let maxNumber = Math.max(...numbers);
+            console.log(maxNumber);
+
+            // Quiz 35
+            let randomNum = Math.random();
+            console.log(randomNum);
+      </script>
+</body>
+</html>

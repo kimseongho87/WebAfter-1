@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz</title>
+</head>
+<body>
+      <h3>Array, Date</h3>
+      <script>
+            // Quiz 36
+            var arr = [1, 2, 3, 4, 5];
+            for (let i = 0; i < arr.length; i++) {
+                  console.log(arr[i]);
+            }
+
+            // Quiz 37
+            var arr = [10, 20, 30, 40, 50];
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+               sum += arr[i];
+            }
+            console.log(sum);
+
+            // Quiz38
+            var arr = [5, 8, 2, 10, 3];
+            let max = arr[0];
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+               if (arr[i] > max) {
+                  max = arr[i];
+               }
+               if (arr[i] < min) {
+                  min = arr[i];
+               }
+            }
+            console.log("최대값:", max, "최소값:", min);
+
+            // Quiz39
+            var arr = [1, 2, 3, 4, 5];
+            for (let i = arr.length - 1; i >= 0; i--) {
+               console.log(arr[i]);
+            }
+
+            // Quiz 40
+            let date = new Date();
+            console.log(date.getHours());
+      </script>
+</body>
+</html>

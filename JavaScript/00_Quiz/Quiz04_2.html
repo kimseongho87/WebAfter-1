@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz</title>
+</head>
+<body>
+   <h3> Quiz 9</h3>
+   <script>
+            function funA(arr){
+               document.write("<h3> 한 줄에 10개씩 출력 </h3>");
+               for(let i=0;i<100;i++){
+                  document.write(arr[i] + " ");
+                  if((i+1)%10==0)  {
+                     document.write("<br>");
+                  }
+               }
+            }
+
+            function funB(arr){
+               document.write("<br><br> <h3> 홀수들만 출력하는 함수</h3>");
+               let count=0;
+
+               for(let i=0;i<100;i++){
+                  if(arr[i]%2 !=0){
+                     document.write(arr[i] + " ");
+                     if(++count%10==0){
+                        document.write("<br>");
+                     } 
+                  }
+               }
+            }
+
+            function funC(arr){
+               document.write("<br><br> <h3> 인덱스가 홀수인 수들을 출력하는 함수</h3>");
+               let count=0;
+
+                  for(let i=0;i<100;i++){
+                     if(i%2 !=0){
+                        document.write(arr[i] + " ");
+                        if(++count%10==0){
+                           document.write("<br>");
+                        } 
+                     }
+                  }
+            }  
+
+         function funD(arry){
+            let count=0;
+            
+            for(let i=0;i<100;i++){
+               if(arr[i] %2 ==0) {
+                  count++;
+               }
+            }
+            return count;
+         }
+
+         function funE(arry){
+            let sum=0;
+            
+            for(let i=0;i<100;i++){
+               sum +=arr[i];
+            }
+            return sum;
+         }
+
+
+         let arr=[];
+         for(let i=0;i<100;i++){			
+            arr[i]=i+20;
+         }
+         funA(arr);                                     // ①	배열의 수들을 한 줄에 10개씩 출력하는 함수, 이때 각 수들은 줄이 맞춰져야 함
+         funB(arr);                                     // ②	홀수들만 출력하는 함수, 출력되는 방식은 a와 동일함
+         funC(arr);                                     // ③	인덱스가 홀수인 수들을 출력하는 함수, 출력되는 방식은 ①과 동일함
+
+         let eventCnt=funD(arr);		          // ④	짝수의 개수를 반환하는 함수
+         let arraySum=funE(arr);		          //⑤	배열의 수들의 합을 반환하는 함수
+</script>
+</body>
+</html>
