@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+   <script>
+         function sub(){
+            let arr=new Array();
+
+            let dauther=document.querySelector("#dauther");
+            let olderBrother=dauther.previousSibling;
+            let youngerBrother=dauther.nextSibling;
+            arr.push(olderBrother.nodeType + "," + youngerBrother.nodeType);
+
+            let older=dauther.previousSibling.previousSibling;
+            let younger=dauther.nextSibling.nextSibling;
+            arr.push(older.nodeType + "," + younger.nodeType);
+            // alert(arr.join("\n"));
+
+            let disp=document.querySelector("#disp");
+            let str="오빠의 자식:" + older.childNodes[0].nodeValue + "<br>";
+            str += "동생의 자식:" + younger.childNodes[0].nodeValue;
+            disp.innerHTML=str;
+         }
+   </script>
+</head>
+<body onload="sub()">
+   
+   <h3>형제DOM</h3>
+   
+   <div id="grandfather">
+         <div id="father">
+              <span id="firstSon">첫째 입니다</span>
+              <span id="dauther">둘째 입니다</span>
+              <span id="scondSon">셋째 입니다</span>
+         </div>
+
+         // 1시에 시작합니다.
+   </div>
+   <br><br>
+
+   <disp id="disp"></disp>
+</body>
+</html>

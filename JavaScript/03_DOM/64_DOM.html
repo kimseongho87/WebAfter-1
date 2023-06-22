@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+   <script>
+         function sub(){
+            let form=document.createElement("form");
+            form.setAttribute("id", "createFrom");
+            form.setAttribute("action", "#");
+            form.setAttribute("method", "get");
+
+            let labelName=document.createElement("label");
+            labelName.innerHTML="이름";
+
+            let inputName=document.createElement("input");
+            inputName.setAttribute("type", "text");
+            inputName.setAttribute("name", "name");
+            inputName.setAttribute("size", "12");
+
+            let br=document.createElement("br");
+
+            let inputButton=document.createElement("input");
+            inputButton.setAttribute("type", "button");
+            inputButton.setAttribute("value", "전송");
+            inputButton.setAttribute("onclick", "abc()");
+
+            form.appendChild(labelName);
+            form.appendChild(inputName);
+            form.appendChild(br);
+            form.appendChild(inputButton);
+            document.body.appendChild(form);
+         }
+
+         function abc(){
+            let createFrom=document.querySelector("#createFrom");
+            let name=createFrom.name.value;
+            // alert(name);
+
+            let k=/^[가-힣]+$/;
+            if(!k.test(name)){
+               alert("이름을 올바르게 입력하세요");
+               return;
+            }
+
+            createFrom.submit();
+         }
+   </script>
+</head>
+<body onload="sub()">
+   
+</body>
+</html>

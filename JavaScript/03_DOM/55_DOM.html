@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+   <script>
+         function sub(){
+            let arr=new Array();
+
+            let dauther=document.querySelector("#dauther");
+            let older=dauther.previousSibling;
+            let olderValue=getPreviousSibling(older);
+            arr.push(olderValue);
+
+            let younger=dauther.nextSibling;
+            let youngerValue=getNextSibling(younger);
+            arr.push(youngerValue);
+
+            alert(arr.join("\n"));
+         }
+
+         // 동생 함수
+         function getNextSibling(node){
+            if(node.nodeType==1){
+                  return node.childNodes[0].nodeValue;
+            }
+
+            if(node.nodeType==3){
+                  return node.nextSibling.childNodes[0].nodeValue;
+            }
+         }
+         
+         // 형 함수
+         function getPreviousSibling(node){
+            if(node.nodeType==1){
+                  return node.childNodes[0].nodeValue;
+            }
+
+            if(node.nodeType==3){
+                 return node.previousSibling.childNodes[0].nodeValue;
+            }
+         }
+
+       
+
+   </script>
+</head>
+<body onload="sub()">
+   <h3>형제DOM</h3>
+   
+   <div id="grandfather">
+         <div id="father">
+              <span id="firstSon">첫째 입니다</span>
+              <span id="dauther">둘째 입니다</span>
+              <span id="scondSon">셋째 입니다</span>
+         </div>
+   </div>
+   <br><br>
+
+   <disp id="disp"></disp>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+   <script>
+         function sub(){
+            let arr=new Array();
+            let a=document.querySelector("#a");
+            arr.push(a.innerHTML);
+            arr.push(a.innerText);
+
+            let b=document.querySelector("#b");
+            arr.push(b.innerHTML);
+            arr.push(b.innerText);
+
+            alert(arr.join("\n"));
+
+            let c=document.querySelector("#c");
+            // c.innerHTML="<b> apple </b>";
+            c.innerText="<b> apple </b>";
+         }
+   </script>
+</head>
+<body onload="sub()">
+      <div id="a">apple</div>
+
+      <div id="b">
+            <div>banana</div>
+            <div>melon</div>
+      </div>
+
+      <div id="c"></div>
+</body>
+</html>

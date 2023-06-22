@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+         function sub(){
+            let ul=document.createElement("ul");
+
+            for(let i=0;i<5;i++){
+               let li=document.createElement("li");
+               li.innerText="JavaScript";
+
+               ul.appendChild(li);
+            }
+
+            let ol=document.createElement("ol");
+
+            for(let i=0;i<5;i++){
+               let li=document.createElement("li");
+               li.innerText="HTML & CSS";
+
+               ol.appendChild(li);
+            }
+
+            let example=document.querySelector("#example");
+            example.appendChild(ul);                // 추가
+            example.replaceChild(ol, ul);           // 교체
+            example.removeChild(ol);                // 삭제
+         }
+   </script>
+</head>
+<body onload="sub()">
+      <h3>생성, 추가, 치환, 삭제</h3>
+
+      <div id="example"></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+      <script>
+            function sub(){
+               clear();
+
+               let arr=new Array();
+               let hangeul=document.querySelector("#hangeul");
+               let span=hangeul.querySelectorAll("span");
+
+               let str="";
+               for(let i=0;i<span.length;i++){
+                  str +=span[i].childNodes[0].nodeValue;
+                  arr.push(str);
+               }
+
+               let disp=document.querySelector("#disp");
+               disp.style.color="red";
+               disp.style.fontSize="30px";
+               disp.innerHTML="추출한문자는" + str + "입니다. <br>";
+
+               let alpabes=document.querySelector("#alpabes");
+               let s=alpabes.querySelectorAll("span");
+
+               let ch="";
+               for(let i=0;i<s.length;i++){
+                  ch +=s[i].childNodes[0].nodeValue;
+                  arr.push(ch);
+               }
+               // alert(arr.join("\n"));
+
+               let print=document.querySelector("#print");
+               print.style.color="blue";
+               print.style.fontSize="20px";
+               print.innerHTML="추출한문자는" + ch + "입니다. <br>";
+
+               // 10시 8분 시작합니다.
+            }
+
+            function clear(){
+               let hangeul=document.querySelector("#hangeul");
+               hangeul.style.display="none";
+
+               let alpabes=document.querySelector("#alpabes");
+               alpabes.style.display="none";
+
+               let btn=document.querySelector("#btn");
+               btn.style.display="none";
+            }
+      </script>
+
+   <div id="hangeul">
+         <span>가</span>
+         <span>나</span>
+         <span>다</span>
+   </div>
+
+   <div id="alpabes">
+      <span>A</span>
+      <span>B</span>
+      <span>C</span>
+   </div>
+   <br>
+
+   <input id="btn" type="button" value="클릭" onclick="sub()"/>
+	<br/><br/>
+	
+	<b id="disp"></b>
+	<b id="print"></b>
+</body>
+</html>
