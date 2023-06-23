@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+      <script>
+            function startRequest(){
+               /*   XMLHttpRequest()  
+                     open("전송방식", "서버파일", true) 
+                     send() 
+                     onreadystatechange=콜백함수(~~~ 4, 200) 
+
+                     콜백함수() {   responseText 또는  responseXML}
+               */
+
+               //  .then((response) => response.json())    
+
+               fetch("JSON.txt")                              // 서버주소+서버파일   
+                  .then(function (response){            // 응답처리
+                     return response.json()               // JSON 응답 데이터  
+                  }) 
+
+                  .then(function (data){
+                       //  alert(data);    
+                       
+                       let divName=document.createElement("div");
+                       divName.innerText=data.name;
+
+                       let divAge=document.createElement("div");
+                       divAge.innerText=data.age;
+
+                       let divCity=document.createElement("city");
+                       divCity.innerText=data.city;
+
+                       let disp=document.querySelector("#disp");
+                       disp.appendChild(divName);
+                       disp.appendChild(divAge);
+                       disp.appendChild(divCity);
+                  });
+            }
+      </script>
+   <h3>Fetch</h3>
+
+   <form action="#">
+      <input type="button" value="요청" onclick="startRequest()"/>
+   </form>
+
+   <div id="disp"></div>
+   </body>
+</html>
