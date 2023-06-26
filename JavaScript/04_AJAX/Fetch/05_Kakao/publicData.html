@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+         /*   enconding: wdkT93ooCcYPPWCPWIluRHhUDdOeVrWNekh%2B%2BlQ5ctI5Z9zLH%2FJjV6cblkDmzlqOicnFBWwV5txBotvhrQyrjg%3D%3D
+               deconding: 	wdkT93ooCcYPPWCPWIluRHhUDdOeVrWNekh++lQ5ctI5Z9zLH/JjV6cblkDmzlqOicnFBWwV5txBotvhrQyrjg==  */
+
+         var arr=new Array();
+
+         function toServer(){
+            let url="https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo?serviceKey=wdkT93ooCcYPPWCPWIluRHhUDdOeVrWNekh%2B%2BlQ5ctI5Z9zLH%2FJjV6cblkDmzlqOicnFBWwV5txBotvhrQyrjg%3D%3D";
+
+            fetch(url)
+               .then(function (response){
+                  return response.text();
+               })
+               .then(function (data){
+                  // arr.push(data);
+
+                  let parser=new DOMParser();
+                  let xmlData=parser.parseFromString(data, "application/xml");
+                  arr.push(xmlData);
+
+                  let itemList=xmlData.querySelectorAll("item");
+                  arr.push(itemList.length);
+
+                  let disp=document.querySelector("#disp");
+                  for(let i=0;i<itemList.length;i++){
+                     let itmsNm=itemList[i].querySelector("itmsNm");     // 종목
+                     let mkp=itemList[i].querySelector("mkp");                // 최초가격
+                     let hipr=itemList[i].querySelector("hipr");                 // 최고치
+                     let lopr=itemList[i].querySelector("lopr");                 // 최저치
+
+                     arr.push(itmsNm.childNodes[0].nodeValue + "," +  mkp.childNodes[0].nodeValue);
+                     arr.push(hipr.childNodes[0].nodeValue + "," + lopr.childNodes[0].nodeValue);
+                     // alert(arr.join("\n"));
+
+                     let ul=document.createElement("ul");
+
+                     let itmsNmli=document.createElement("li");
+                     itmsNmli.innerText=itmsNm.childNodes[0].nodeValue ;
+
+                     let mkpli=document.createElement("li");
+                     mkpli.innerText=mkp.childNodes[0].nodeValue;
+
+                     let hiprli=document.createElement("li");
+                     hiprli.innerText=hipr.childNodes[0].nodeValue ;
+
+                     let loprli=document.createElement("li");
+                     loprli.innerText= lopr.childNodes[0].nodeValue;
+
+                     ul.appendChild(itmsNmli);
+                     ul.appendChild(mkpli);
+                     ul.appendChild(hiprli);
+                     ul.appendChild(loprli);
+
+                     disp.appendChild(ul);
+                     disp.appendChild(document.createElement("br"));
+
+                     // 4시 20분 시작합니다.
+                  }
+
+                
+               })
+               .catch(function (error){
+                  document.write("실패:", error);
+               });
+         }
+
+   </script>
+   <a href="#" style="cursor: pointer; text-decoration: none;" onclick="toServer()">주식정보</a>
+   <br><br>
+
+   <div id="disp"></div>
+</body>
+</html>
