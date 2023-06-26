@@ -3,17 +3,15 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Open API</title>
 </head>
 <body>
    <script>
-         /*   enconding: wdkT93ooCcYPPWCPWIluRHhUDdOeVrWNekh%2B%2BlQ5ctI5Z9zLH%2FJjV6cblkDmzlqOicnFBWwV5txBotvhrQyrjg%3D%3D
-               deconding: 	wdkT93ooCcYPPWCPWIluRHhUDdOeVrWNekh++lQ5ctI5Z9zLH/JjV6cblkDmzlqOicnFBWwV5txBotvhrQyrjg==  */
-
-         var arr=new Array();
+ 
+        var arr=new Array();
 
          function toServer(){
-            let url="https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo?serviceKey=wdkT93ooCcYPPWCPWIluRHhUDdOeVrWNekh%2B%2BlQ5ctI5Z9zLH%2FJjV6cblkDmzlqOicnFBWwV5txBotvhrQyrjg%3D%3D";
+            let url="https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo?serviceKey=" + "각자인증키";
 
             fetch(url)
                .then(function (response){
