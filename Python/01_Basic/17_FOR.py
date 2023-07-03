@@ -91,9 +91,27 @@ tup=(1, 2, 3)
 print(tup, tup[0])
 for val in tup:
     print(val, end=' ')
-print()
+print("\n")
 
-# 5시 시작합니다.
+# dic
+ages={"홍길동":23, "이순신":25, "이영자":24}
+print(ages)
+print(ages.keys(), type(ages.keys()), list(ages.keys()))
+print(ages.values())
+
+for key in ages.keys():
+    print(key)
+
+for value in ages.values():
+    print(value)
+
+print(ages.items(), type(ages.items()), tuple(ages.items()))
+for key, value in ages.items():
+    print("{}의 나이는:{}".format(key, value))
+
+
+
+
 
 
 
