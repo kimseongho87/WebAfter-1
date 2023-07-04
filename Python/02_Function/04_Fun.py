@@ -37,3 +37,5 @@ def calc(begin, end, step=1):
 print(calc(1, 10))
 print(calc(5, 50))
 print(calc(1, 10, 2))
+
+
