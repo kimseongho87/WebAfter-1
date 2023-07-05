@@ -28,4 +28,36 @@ for idx, val in  enumerate(arr):
     print(idx, val)
 print()    
 
-# 5시 시작합니다.
+# eval() 
+print("1+2")
+print(eval("1+2"))
+print()
+
+# int()
+print(int('3'))
+print(int(3.14))
+print(int(10))
+print()
+
+# len()
+print(len("Hello"))
+print(len([1, 2, 3, 4, 5]))
+print()
+
+#min(), max()
+print(max([1, 2, 3, 4, 5, 6, 77, 88, 0]))
+print(min("Hello"))       # a 97,  A 65
+print(min("hello"))  
+print()
+
+# round
+print(round(5.56))
+print(round(5.56, 1))
+print()
+
+# isinstacne : 해당 클래스에서 만들어진 객체인가?
+class Person:
+    pass
+
+p=Person()
+print(isinstance(p, Person))

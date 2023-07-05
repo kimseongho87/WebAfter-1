@@ -1,0 +1,75 @@
+1 Family
+2 Restaurant
+3 Books
+4 Travel
+5 Website
+6 Accident
+7 Childhood memory
+8 Favorite rooms
+9 Presents
+10 Historical place
+11 Newspaper/ Magazine
+12 A memorable event
+13 A favorite subject
+14 A museum
+15 A favorite movie
+16 A foreign country
+17 Parties
+18 A teacher
+19 A friend
+20 A hotel
+21 A letter
+22 Hobbies
+23 Music
+24 Shopping
+25 Holiday
+26 Animals
+27 A practical skill
+28 Sport
+29 A School
+30 Festival
+31 Food
+32 Household appliance
+33 A music band
+34 Weather
+35 Neighbor
+36 Natural scenery
+37 Outdoor activities
+38 Law
+39 Pollution
+40 Traffic jam
+41 TV program
+42 Architect/ Building
+43 Electronic Media
+44 Job/ Career
+45 Competition/ contest
+46 A garden
+47 Hometown
+48 Clothing
+49 Advertisement
+50 A project
+51 A wedding
+52 A Coffee shop
+53 Culture
+54 Transport
+55 Politician
+56 Communication
+57 Business
+58 Computer
+59 Exercise
+60 Goal/ ambition
+61 Art
+62 Fashion
+63 Jewelry
+64 Cosmetic
+65 Indoor Game
+66 Phone conversation
+67 Learning A Second language
+68 A Creative Person
+69 A celebrity
+70 A Health Problem
+71 Technological advancements
+72 A Landmark
+73 Handcraft Items
+74 Plastic Surgery
+75 Success

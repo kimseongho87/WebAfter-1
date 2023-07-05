@@ -18,6 +18,8 @@ print(minus(10, 5))
 #Ex3)
 import calc  as c
 print(c.plus(10, 5))
+print(c.imsi)
+c.Su()
 
 # python 표준 모듈 목록
 import sys 

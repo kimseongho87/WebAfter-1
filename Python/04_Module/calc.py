@@ -14,4 +14,7 @@ def multiply(a, b):
 def divide(a, b):
     return a/b
 
-# 4시 16분 시작
+imsi=10
+
+class Su:
+    pass
