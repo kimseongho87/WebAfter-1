@@ -38,4 +38,3 @@ if __name__ == "__main__":
     watcha_grade()
 
 
-    # 5시 7분 시작

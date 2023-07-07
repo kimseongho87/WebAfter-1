@@ -22,8 +22,25 @@ elem=driver.find_element(By.NAME, "q")
 elem.send_keys("펭수")
 elem.submit()
 
-time.sleep(2)
+# 스크롤 추가
+# Get scroll height  끝
+last_height = driver.execute_script("return document.body.scrollHeight")
 
+while True:
+    # Scroll down to bottom    처음~끝, 끝까지 스크롤을 내리겠다
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    # Wait to load page   로딩시간
+    time.sleep(2)
+
+    # Calculate new scroll height and compare with last scroll height
+    new_height = driver.execute_script("return document.body.scrollHeight")     # 현재
+    if new_height == last_height:       # 현재 == 끝
+        break
+    last_height = new_height              # 스크롤이 길어지면
+  
+
+time.sleep(2)
 images=driver.find_elements(By.CLASS_NAME, "rg_i.Q4LuWd")
 print("이미지 갯수>>>>>", len(images))
 
@@ -42,4 +59,3 @@ for img in images:
 # 웹 드라이버 닫기
 driver.quit()
 
-# 11분 시작
