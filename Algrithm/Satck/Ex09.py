@@ -20,5 +20,7 @@ if __name__ == "__main__":
       stack.push(80)
       stack.push(1)
       stack.push(10)
+      print()
 
-      # print(my_max(stack))
+      print(my_max(stack))
+     # print(my_sum(stack))

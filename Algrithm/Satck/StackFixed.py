@@ -17,6 +17,7 @@ class Stack:
             return 
         self.top +=1
         self.stack[self.top]=data
+        print("%s"%(self.stack))
 
    # pop() 때문에 비어있니?
     def is_Empty(self):
@@ -28,7 +29,9 @@ class Stack:
             return 
    
         data=self.stack[self.top]
+        self.stack[self.top]=None
         self.top -=1
+        print("%s"%(self.stack))
         return data 
      
     def peek(self):
