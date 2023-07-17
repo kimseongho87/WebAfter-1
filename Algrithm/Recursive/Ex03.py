@@ -13,8 +13,8 @@ def print_Start(n):         # 4
         print_Start(n-1)     #  n:5  4  / n:4  3
         print("*" * n)
       
-
-print_Start(5)
+if __name__ == "__main__":
+    print_Start(5)
 
 
 
