@@ -108,7 +108,82 @@ INSERT INTO stdclubtbl VALUES(5, 1004, '바둑');
 
 SELECT * FROM stdclubtbl;
 
--- 3개의 테이블 조인 / 학생을 기준으로 학생번호, 이름, 가입한 동아리, 동아리방
+INSERT INTO sungjuk(grade, irum, kor, eng, mat) VALUES (1, '홍길동', 90, 80, 90);
+INSERT INTO sungjuk(grade, irum, kor, eng, mat) VALUES (1, '박길동', 80, 45, 100);
+INSERT INTO sungjuk(grade, irum, kor, eng, mat) VALUES (2, '조길동', 70, 55, 90);
+INSERT INTO sungjuk(grade, irum, kor, eng, mat) VALUES (2, '김길동', 80, 70, 80);
+INSERT INTO sungjuk(grade, irum, kor, eng, mat) VALUES (3, '강길동', 70, 80, 70);
+INSERT INTO sungjuk(grade, irum, kor, eng, mat) VALUES (3, '이길동', 60, 80, 90);
+SELECT * FROM sungjuk;
+
+-- 수정
+UPDATE sungjuk SET kor=100 WHERE bunho=2;
+UPDATE sungjuk SET irum='이영자' WHERE bunho=3;
+UPDATE sungjuk SET kor=100, eng=100, mat=100 WHERE bunho=5;
+
+UPDATE sungjuk SET tot=kor+eng+mat;
+UPDATE sungjuk SET avg=tot/3;
+
+-- 삭제
+DELETE FROM sungjuk WHERE bunho=6;
+
+-- 8-3) 참조테이블 추가, 삭제, 수정
+SELECT * FROM emp;
+SELECT * FROM dept;
+
+-- 부서코드 추가
+INSERT INTO dept VALUES('100', '개발3팀');
+SELECT * FROM dept;	
+
+-- 부서코드 10번 삭제
+DELETE FROM dept WHERE dept_id='50';		-- ERROR
+ 
+SET foreign_key_checks = 0;         		-- 제약조건 활성
+
+DELETE FROM dept WHERE dept_id='50';
+SELECT * FROM dept;			   				-- 삭제 확인
+
+SET foreign_key_checks = 1;         		-- 제약조건 비활성 
+
+UPDATE emp SET dept_id='50' WHERE emp_id='30';  -- 조인성 부서코드 정리
+
+-- 부서코드 수정
+UPDATE dept SET  dept_name="개발팀" WHERE dept_id='30'; 
+UPDATE dept SET dept_id='700' WHERE dept_name="인사부";  -- ERROR
+
+SET foreign_key_checks = 0;         -- 제약조건 활성
+
+UPDATE dept SET dept_id='120' WHERE dept_name="인사부" ;
+SELECT * FROM dept;			   		-- 수정 확인
+
+SET foreign_key_checks = 1;         -- 제약조건 비활성 
+
+-- 제약조건에 이름 설정하기
+CREATE TABLE ex(
+	apple VARCHAR(10),
+    banana VARCHAR(20),
+    melon VARCHAR(30),
+    
+    CONSTRAINT PK_ex_apple PRIMARY KEY(apple),
+    CONSTRAINT UK_ex_banana UNIQUE KEY(banana)
+);
+DESC ex;
+
+-- 제약키 삭제
+ALTER TABLE ex DROP PRIMARY KEY;
+ALTER TABLE ex DROP CONSTRAINT UK_ex_banana;
+-- ALTER TABLE ex DROP CONSTRAINT 외래키명
+
+-- 제약키 추가
+ALTER TABLE ex ADD CONSTRAINT PK_ex_melon PRIMARY KEY(melon);
+ALTER TABLE ex ADD CONSTRAINT PK_ex_apple UNIQUE KEY(apple);
+
+
+
+
+
+
+
 
 
 
