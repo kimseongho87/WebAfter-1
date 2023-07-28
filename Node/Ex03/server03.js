@@ -12,6 +12,6 @@ app.get("/", function(req, res){
 });
 
 // http://localhost:2000/about
-app.get("/about", function(req, res){
+app.get("/about", function(req---, res){
    res.sendFile(__dirname + "/pages/about.html");
 });
