@@ -107,33 +107,19 @@ SELECT * FROM subject;
 SET foreign_key_checks = 1;                -- 제약조건 비활성
 DELETE FROM subject WHERE sub_no='107';    -- 확인 
 
-DESC enrol;
-SELECT * FROM enrol;
-INSERT INTO enrol VALUES('300', '20151062', 81);
-
 ALTER TABLE enrol DROP CONSTRAINT FK_enrol_sub_no;   -- 참조키를 삭제
-INSERT INTO enrol VALUES('300', '20151062', 81);
-DESC enrol;
-DELETE FROM enrol WHERE sub_no='300';
 
 -- 참조키를 다시 만든 후 참조키 수정,삭제 용이
 ALTER TABLE enrol 
 ADD CONSTRAINT FK_enrol_sub_no FOREIGN KEY(sub_no) REFERENCES subject(sub_no)
-ON UPDATE CASCADE
-ON DELETE CASCADE;
-
-ALTER TABLE enrol
-ADD CONSTRAINT FK_sub_no FOREIGN KEY(sub_no) REFERENCES subject(sub_no) 
-ON UPDATE CASCADE
-ON DELETE CASCADE;
+ON DELETE CASCADE ON UPDATE CASCADE;
+desc enrol;
 
 SELECT * FROM subject;
 SELECT * FROM enrol;
 
-DELETE FROM subject WHERE sub_no='101';
-DELETE FROM subject WHERE sub_no='104';
-
-UPDATE subject SET sub_no='99' WHERE sub_name='기계공작법';
+DELETE FROM subject WHERE sub_no='102';
+UPDATE subject SET sub_no='999' WHERE sub_no='105';
 
 -- 사용자 테이블
 CREATE TABLE users (
@@ -176,6 +162,20 @@ DELETE FROM users WHERE user_id='1';
 
 -- 두테이블 영향을 받아서 테이블의 레코드가 다 수정된다.
 UPDATE users SET user_id='20' WHERE user_id='2';
+
+USE example;
+CREATE TABLE datetest(
+	a DATE, 		-- 날짜
+    b TIME,			-- 시분초
+    c DATETIME      -- 날짜시간
+);
+DESC datetest;
+
+INSERT INTO datetest VALUES('2023-07-28', '12:00:27', '2023-07-27 12:00:10');
+SELECT * FROM datetest;
+INSERT INTO datetest VALUES(CURDATE(), CURTIME(), SYSDATE());
+
+
 
 
 

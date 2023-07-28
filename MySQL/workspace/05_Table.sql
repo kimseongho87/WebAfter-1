@@ -135,7 +135,7 @@ SELECT * FROM dept;
 INSERT INTO dept VALUES('100', '개발3팀');
 SELECT * FROM dept;	
 
--- 부서코드 10번 삭제
+-- 부서코드 50번 삭제
 DELETE FROM dept WHERE dept_id='50';		-- ERROR
  
 SET foreign_key_checks = 0;         		-- 제약조건 활성
