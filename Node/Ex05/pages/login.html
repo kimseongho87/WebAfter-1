@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      function checkform(){
+         let form=document.querySelector("#logincheck");
+         
+         if(form.id.value == ""){
+            alert("아이디를 입력하세요")
+            form.id.focus()
+            return ;
+         }
+
+         if(form.pwd.value == ""){
+            alert("비밀번호 입력하세요")
+            form.id.focus()
+            return ;
+         }
+
+         form.submit()
+      }
+   </script>
+
+   <form action="/login/check" method="post" id="logincheck">
+      <span>아이디</span>
+      <input type="text" name="id"/>
+      <br/><br/>
+
+      <span>비밀번호</span>
+      <input type="password" name="pwd" />
+      <br/><br/>
+
+      <input type="button"  value="전송" onclick="checkform()"/>
+      <input type="reset" value="취소"/>
+  </form>
+  <br/><br/>
+</body>
+</html>
